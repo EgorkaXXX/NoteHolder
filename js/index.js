@@ -23,6 +23,20 @@ window.onload=function(){
 	
 	
 	//BTN ANIMATION	
+	document.querySelector(".log_btn_menu").onmouseover = function(){
+		this.style.boxShadow = "0 0 5px lightgray";
+	}
+	document.querySelector(".log_btn_menu").onmouseout = function(){
+		this.style.boxShadow = "0 0 0px lightgray";
+	}
+	
+	document.querySelector(".reg_btn_menu").onmouseover = function(){
+		this.style.boxShadow = "0 0 5px lightgray";
+	}
+	document.querySelector(".reg_btn_menu").onmouseout = function(){
+		this.style.boxShadow = "0 0 0px lightgray";
+	}
+	
 	document.querySelector(".log_btn").onmouseover = function(){
 		this.style.boxShadow = "0 0 5px lightgray";
 	}
@@ -30,13 +44,12 @@ window.onload=function(){
 		this.style.boxShadow = "0 0 0px lightgray";
 	}
 	
-	document.querySelector(".reg_btn").onmouseover = function(){
-		this.style.boxShadow = "0 0 5px lightgray";
-	}
-	document.querySelector(".reg_btn").onmouseout = function(){
-		this.style.boxShadow = "0 0 0px lightgray";
-	}
 	
+	//FORM APPEARENCE
+	document.querySelector(".log_btn_menu").onclick = function(){
+		document.querySelector(".log_form").style.top="150px";
+		
+	}
 	
 	
 	console.log("script_loaded");
