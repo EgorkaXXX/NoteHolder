@@ -90,7 +90,7 @@ body{
 	height: 180px;
 	padding: 60px;
 	background: white;
-	box-shadow: 0 0 menu_btntgray;
+	box-shadow: 0 0 5px lightgray;
 	transition: top 0.5s;
 }
 
