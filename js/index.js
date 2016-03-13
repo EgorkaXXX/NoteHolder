@@ -46,14 +46,28 @@ window.onload=function(){
 		this.style.boxShadow = "0 0 0px lightgray";
 	}
 	
-	document.querySelector(".cancel_btn").onmouseover = function(){
+	document.querySelector(".log_cancel_btn").onmouseover = function(){
 		this.style.boxShadow = "0 0 5px lightgray";
 	}
-	document.querySelector(".cancel_btn").onmouseout = function(){
+	document.querySelector(".log_cancel_btn").onmouseout = function(){
 		this.style.boxShadow = "0 0 0px lightgray";
 	}
 	
 	//register form buttons
+	document.querySelector(".reg_btn").onmouseover = function(){
+		this.style.boxShadow = "0 0 5px lightgray";
+	}
+	document.querySelector(".reg_btn").onmouseout = function(){
+		this.style.boxShadow = "0 0 0px lightgray";
+	}
+	
+	document.querySelector(".reg_cancel_btn").onmouseover = function(){
+		this.style.boxShadow = "0 0 5px lightgray";
+	}
+	document.querySelector(".reg_cancel_btn").onmouseout = function(){
+		this.style.boxShadow = "0 0 0px lightgray";
+	}
+	
 	
 	//FORM APPEARENCE\HIDE
 	
@@ -64,7 +78,7 @@ window.onload=function(){
 		
 	}
 	
-	document.querySelector(".cancel_btn").onclick = function(){
+	document.querySelector(".log_cancel_btn").onclick = function(){
 		document.querySelector(".log_form").style.top="-500px";
 		
 	}
@@ -76,7 +90,7 @@ window.onload=function(){
 		
 	}
 	
-	document.querySelector(".rcancel_btn").onclick = function(){
+	document.querySelector(".reg_cancel_btn").onclick = function(){
 		document.querySelector(".reg_form").style.top="-500px";
 		
 	}
