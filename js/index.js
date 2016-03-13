@@ -4,25 +4,26 @@ window.onload=function(){
 	window.onscroll = function(){
 		var scroll = pageYOffset;
 		
-		//NAME APPEARENCE
-		if(scroll>=105){
+		//name appearence
+		if(scroll>=100){
 			document.querySelector(".name").style.color="black";
 		}
-		if(scroll<105){
+		if(scroll<100){
 			document.querySelector(".name").style.color="white";
 		}
 		
-		//SHADOW APPEARENCE
-		if(scroll>=10){
+		//shadow appearence
+		if(scroll>=15){
 			document.querySelector(".menu").style.boxShadow="0 0 5px lightgray";
 		}
-		if(scroll<10){
+		if(scroll<15){
 			document.querySelector(".menu").style.boxShadow="0 0 0px lightgray";
 		}
 	}
 	
-	
 	//BTN ANIMATION	
+	
+	//menu buttons
 	document.querySelector(".log_btn_menu").onmouseover = function(){
 		this.style.boxShadow = "0 0 5px lightgray";
 	}
@@ -37,6 +38,7 @@ window.onload=function(){
 		this.style.boxShadow = "0 0 0px lightgray";
 	}
 	
+	//login form buttons
 	document.querySelector(".log_btn").onmouseover = function(){
 		this.style.boxShadow = "0 0 5px lightgray";
 	}
@@ -44,10 +46,38 @@ window.onload=function(){
 		this.style.boxShadow = "0 0 0px lightgray";
 	}
 	
+	document.querySelector(".cancel_btn").onmouseover = function(){
+		this.style.boxShadow = "0 0 5px lightgray";
+	}
+	document.querySelector(".cancel_btn").onmouseout = function(){
+		this.style.boxShadow = "0 0 0px lightgray";
+	}
 	
-	//FORM APPEARENCE
+	//register form buttons
+	
+	//FORM APPEARENCE\HIDE
+	
+	//login form
 	document.querySelector(".log_btn_menu").onclick = function(){
 		document.querySelector(".log_form").style.top="150px";
+		document.querySelector(".reg_form").style.top="-500px";
+		
+	}
+	
+	document.querySelector(".cancel_btn").onclick = function(){
+		document.querySelector(".log_form").style.top="-500px";
+		
+	}
+	
+	//register form
+	document.querySelector(".reg_btn_menu").onclick = function(){
+		document.querySelector(".reg_form").style.top="150px";
+		document.querySelector(".log_form").style.top="-500px";
+		
+	}
+	
+	document.querySelector(".rcancel_btn").onclick = function(){
+		document.querySelector(".reg_form").style.top="-500px";
 		
 	}
 	
