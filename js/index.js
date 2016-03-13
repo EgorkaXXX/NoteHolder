@@ -4,21 +4,16 @@ window.onload=function(){
 	window.onscroll = function(){
 		var scroll = pageYOffset;
 		
-		//name appearence
-		if(scroll>=100){
-			document.querySelector(".name").style.color="black";
-		}
-		if(scroll<100){
-			document.querySelector(".name").style.color="white";
-		}
-		
-		//shadow appearence
+		//name&shadow appearence
 		if(scroll>=15){
+			document.querySelector(".name").style.color="black";
 			document.querySelector(".menu").style.boxShadow="0 0 5px lightgray";
 		}
 		if(scroll<15){
+			document.querySelector(".name").style.color="white";
 			document.querySelector(".menu").style.boxShadow="0 0 0px lightgray";
 		}
+		
 	}
 	
 	//FORM APPEARENCE\HIDE
