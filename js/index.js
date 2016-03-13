@@ -7,7 +7,7 @@ window.onload=function(){
 		//name&shadow appearence
 		if(scroll>=15){
 			document.querySelector(".name").style.color="black";
-			document.querySelector(".menu").style.boxShadow="0 0 5px lightgray";
+			document.querySelector(".menu").style.boxShadow="0 0 10px lightgray";
 		}
 		if(scroll<15){
 			document.querySelector(".name").style.color="white";
@@ -22,7 +22,6 @@ window.onload=function(){
 	document.querySelector(".log_menu_btn").onclick = function(){
 		document.querySelector(".log_form").style.top="150px";
 		document.querySelector(".reg_form").style.top="-500px";
-		
 	}
 	
 	document.querySelector(".log_cancel_btn").onclick = function(){
