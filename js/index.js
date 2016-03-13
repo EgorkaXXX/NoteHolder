@@ -21,54 +21,6 @@ window.onload=function(){
 		}
 	}
 	
-	//BTN ANIMATION	
-	
-	//menu buttons
-	document.querySelector(".log_menu_btn").onmouseover = function(){
-		this.style.boxShadow = "0 0 5px lightgray";
-	}
-	document.querySelector(".log_menu_btn").onmouseout = function(){
-		this.style.boxShadow = "0 0 0px lightgray";
-	}
-	
-	document.querySelector(".reg_menu_btn").onmouseover = function(){
-		this.style.boxShadow = "0 0 5px lightgray";
-	}
-	document.querySelector(".reg_menu_btn").onmouseout = function(){
-		this.style.boxShadow = "0 0 0px lightgray";
-	}
-	
-	//login form buttons
-	document.querySelector(".log_btn").onmouseover = function(){
-		this.style.boxShadow = "0 0 5px lightgray";
-	}
-	document.querySelector(".log_btn").onmouseout = function(){
-		this.style.boxShadow = "0 0 0px lightgray";
-	}
-	
-	document.querySelector(".log_cancel_btn").onmouseover = function(){
-		this.style.boxShadow = "0 0 5px lightgray";
-	}
-	document.querySelector(".log_cancel_btn").onmouseout = function(){
-		this.style.boxShadow = "0 0 0px lightgray";
-	}
-	
-	//register form buttons
-	document.querySelector(".reg_btn").onmouseover = function(){
-		this.style.boxShadow = "0 0 5px lightgray";
-	}
-	document.querySelector(".reg_btn").onmouseout = function(){
-		this.style.boxShadow = "0 0 0px lightgray";
-	}
-	
-	document.querySelector(".reg_cancel_btn").onmouseover = function(){
-		this.style.boxShadow = "0 0 5px lightgray";
-	}
-	document.querySelector(".reg_cancel_btn").onmouseout = function(){
-		this.style.boxShadow = "0 0 0px lightgray";
-	}
-	
-	
 	//FORM APPEARENCE\HIDE
 	
 	//login form
