@@ -22,10 +22,14 @@ window.onload=function(){
 	document.querySelector(".log_menu_btn").onclick = function(){
 		document.querySelector(".log_form").style.top="150px";
 		document.querySelector(".reg_form").style.top="-500px";
+		
+		document.querySelector(".back").style.display="block";	document.querySelector(".back").style.background="rgba(1,1,1,0.5)";
 	}
 	
 	document.querySelector(".log_cancel_btn").onclick = function(){
 		document.querySelector(".log_form").style.top="-500px";
+		
+		document.querySelector(".back").style.display="none";	document.querySelector(".back").style.background="rgba(1,1,1,0)";
 		
 	}
 	
@@ -34,12 +38,24 @@ window.onload=function(){
 		document.querySelector(".reg_form").style.top="150px";
 		document.querySelector(".log_form").style.top="-500px";
 		
+		document.querySelector(".back").style.display="block";	document.querySelector(".back").style.background="rgba(1,1,1,0.5)";
+		
 	}
 	
 	document.querySelector(".reg_cancel_btn").onclick = function(){
 		document.querySelector(".reg_form").style.top="-500px";
 		
+		document.querySelector(".back").style.display="none";	document.querySelector(".back").style.background="rgba(1,1,1,0)";
 	}
+	
+	//back click
+	document.querySelector(".back").onclick = function(){
+		document.querySelector(".reg_form").style.top="-500px";
+		document.querySelector(".log_form").style.top="-500px";
+		
+		document.querySelector(".back").style.display="none";	document.querySelector(".back").style.background="rgba(1,1,1,0)";
+	}
+	
 	
 	
 	console.log("script_loaded");
