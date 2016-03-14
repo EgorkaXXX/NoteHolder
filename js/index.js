@@ -31,12 +31,10 @@ var login_alert = document.querySelector(".login_alert");
 		if(scroll>=15){
 			name.style.color="black";
 			menu.style.boxShadow="0 0 10px lightgray";
-			menu.style.backgroundColor=light_indigo;
 		}
 		if(scroll<15){
 			name.style.color="white";
 			menu.style.boxShadow="0 0 0px lightgray";
-			menu.style.backgroundColor=white;
 		}
 		
 	}
