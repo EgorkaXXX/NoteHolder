@@ -30,7 +30,6 @@ body{
 		height: 20px;
 		top: 20px;
 		padding: 10px;
-		&:hover{background: $orange;}
 	}
 }
 
@@ -63,6 +62,7 @@ body{
 	border-radius: 5px;
 	transition: all 0.5s;
 	color: $dark_indigo;
+	&:hover{background: $orange;}
 
 }
 
