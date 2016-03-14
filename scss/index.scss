@@ -126,6 +126,24 @@ body{
 	&:focus{border-bottom: 2px solid $indigo;}
 }
 
+
+/*ALERTS*/
+
+.login_alert{
+	z-index: 5;
+	position: fixed;
+	bottom: -80px;
+	left: 40%;
+	background: $orange;
+	width:15%;
+	height: 20px;
+	padding: 20px;
+	font-weight: bold;
+	text-align: center;
+	box-shadow: 0 15px 30px $dark;
+	transition: $anim;
+}
+
 /*CONTENT*/
 
 .content{
