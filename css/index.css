@@ -20,6 +20,10 @@ body{
 	left: 10px;
 }
 
+.logo img{
+	height: 60px;
+}
+
 .name{
 	position: absolute;
 	top: 10px;
