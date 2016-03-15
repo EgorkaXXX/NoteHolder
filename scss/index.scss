@@ -66,7 +66,6 @@ body{
 	border-radius: 5px;
 	transition: $anim;
 	color: $orange;
-	opacity: 0;
 	&:hover{background: $light_indigo;}
 
 }
@@ -88,10 +87,12 @@ body{
 
 .log_menu_btn{
 	right: 60px;
+	opacity: 0;
 }
 
 .reg_menu_btn{
 	right: 220px;
+	opacity: 0;
 }
 
 /*FORMS*/
