@@ -1,6 +1,6 @@
 window.onload=function(){
-	
-//scss vars
+///
+//scss 
 var dark_indigo =   "#303F9F";
 var indigo = 	 	"#3F51B5";
 var light_indigo =  "#C5CAE9";
