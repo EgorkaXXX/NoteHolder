@@ -4,11 +4,10 @@
 
 <head>
 	<title>Welcome to NoteHolder</title>
+	<link rel="shortcut icon" href="img/logo.png">
 	<link rel="stylesheet" href="scss/index.css">
-	<script src="js/index_vars.js"></script>
-	<script src="js/index_funcs.js"></script>
 	<script src="js/index.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/index_php.js"></script>
 	<script src="js/jquery.js"></script>
 </head>
 
@@ -69,16 +68,17 @@
 <!--	FORMS-->
 	<div class="form reg_form">
 		<input class="field reg_email" type="text" placeholder="email" name="email">
-		<input class="field reg_pass" type="password" placeholder="password" name="pwd1">
-		<input class="field reg_pass2" type="password" placeholder="retype password" name="pwd2">
-		<div class="btn reg_btn" onclick="registerNewUser();">Register</div>
+		<input class="field reg_pass" type="password" placeholder="password (no longer than 20 symbols)" name="pwd1" maxlength="20">
+		<input class="field reg_pass2" type="password" placeholder="retype password" name="pwd2" maxlength="20">
+		<div class="btn reg_btn">Register</div>
 		<div class="btn reg_cancel_btn">Cancel</div>
 	</div>
 	
 	<div class="form log_form">
 		<input class="field log_email" type="text" placeholder="email" name="email">
 		<input class="field log_pass" type="password" placeholder="password" name="pwd1">
-		<div class="btn log_btn" onclick="authoriseUser();">Login</div>
+		<div class="show_pass_btn"></div>
+		<div class="btn log_btn">Login</div>
 		<div class="btn log_cancel_btn">Cancel</div>
 	</div>
 	

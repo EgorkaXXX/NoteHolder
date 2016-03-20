@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-03-16 16:31:39
+/* Smarty version 3.1.29, created on 2016-03-21 01:09:42
   from "C:\OpenServer\domains\noteholder.local\views\default\start.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56e9603ba104e4_70606166',
+  'unifunc' => 'content_56ef1fa6b90be9_81515344',
   'file_dependency' => 
   array (
     '419fc9c87f0255a3e3ffea2c02d88cf4c8075c4e' => 
     array (
       0 => 'C:\\OpenServer\\domains\\noteholder.local\\views\\default\\start.tpl',
-      1 => 1458135097,
+      1 => 1458511768,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56e9603ba104e4_70606166 ($_smarty_tpl) {
+function content_56ef1fa6b90be9_81515344 ($_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 
@@ -27,18 +27,13 @@ function content_56e9603ba104e4_70606166 ($_smarty_tpl) {
 
 <head>
 	<title>Welcome to NoteHolder</title>
+	<link rel="shortcut icon" href="img/logo.png">
 	<link rel="stylesheet" href="scss/index.css">
-	<?php echo '<script'; ?>
- src="js/index_vars.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- src="js/index_funcs.js"><?php echo '</script'; ?>
->
 	<?php echo '<script'; ?>
  src="js/index.js"><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
- src="js/main.js"><?php echo '</script'; ?>
+ src="js/index_php.js"><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
  src="js/jquery.js"><?php echo '</script'; ?>
@@ -102,16 +97,17 @@ function content_56e9603ba104e4_70606166 ($_smarty_tpl) {
 <!--	FORMS-->
 	<div class="form reg_form">
 		<input class="field reg_email" type="text" placeholder="email" name="email">
-		<input class="field reg_pass" type="password" placeholder="password" name="pwd1">
-		<input class="field reg_pass2" type="password" placeholder="retype password" name="pwd2">
-		<div class="btn reg_btn" onclick="registerNewUser();">Register</div>
+		<input class="field reg_pass" type="password" placeholder="password (no longer than 20 symbols)" name="pwd1" maxlength="20">
+		<input class="field reg_pass2" type="password" placeholder="retype password" name="pwd2" maxlength="20">
+		<div class="btn reg_btn">Register</div>
 		<div class="btn reg_cancel_btn">Cancel</div>
 	</div>
 	
 	<div class="form log_form">
 		<input class="field log_email" type="text" placeholder="email" name="email">
 		<input class="field log_pass" type="password" placeholder="password" name="pwd1">
-		<div class="btn log_btn" onclick="authoriseUser();">Login</div>
+		<div class="show_pass_btn"></div>
+		<div class="btn log_btn">Login</div>
 		<div class="btn log_cancel_btn">Cancel</div>
 	</div>
 	
