@@ -13,7 +13,7 @@ function formHide(form){
 }
 
 // регистрация нового пользователя
-function registerNewUser(){
+function RegisterNewUser(){
     var postData = getData('.reg_form');
     
     $.ajax({
@@ -35,7 +35,7 @@ function registerNewUser(){
     });
 }
 //авторизация пользователя
-function authoriseUser(){
+function AuthoriseUser(){
     var postData = getData('.log_form');
     
     $.ajax({

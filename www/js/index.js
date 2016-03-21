@@ -123,16 +123,16 @@ HidePass = function(){
 	elems.log_cancel_btn.onclick = function(){HideForm();}
 	elems.show_pass_btn.onmousedown = function(){ShowPass();}
 	elems.show_pass_btn.onmouseup = function(){HidePass();}
-	elems.log_btn.onclick = function(){authoriseUser();}
+	elems.log_btn.onclick = function(){AuthoriseUser();}
 	
 	//register form
 	elems.reg_menu_btn.onclick = function(){ShowRegForm();}
 	elems.reg_cancel_btn.onclick = function(){HideForm();}
-	elems.reg_btn.onclick = function(){registerNewUser();}
+	elems.reg_btn.onclick = function(){RegisterNewUser();}
 	
 	//back click
 	elems.back.onclick = function(){HideForm();}
 	
-	//
+	//	
 	console.log("script_loaded");
 }
