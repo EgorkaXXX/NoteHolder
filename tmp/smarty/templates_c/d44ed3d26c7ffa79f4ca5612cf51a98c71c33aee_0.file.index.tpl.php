@@ -1,14 +1,43 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-03-21 17:14:10
+  from "C:\OpenServer\domains\noteholder.local\views\index.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_56f001b236e662_53692842',
+  'file_dependency' => 
+  array (
+    'd44ed3d26c7ffa79f4ca5612cf51a98c71c33aee' => 
+    array (
+      0 => 'C:\\OpenServer\\domains\\noteholder.local\\views\\index.tpl',
+      1 => 1458569649,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_56f001b236e662_53692842 ($_smarty_tpl) {
+?>
 <!DOCTYPE HTML>
 
 <html>
 
 <head>
 	<title>Welcome to NoteHolder</title>
-	<link rel="shortcut icon" href="img/logo.png">
-	<link rel="stylesheet" href="scss/index.css">
-	<script src="js/index.js"></script>
-	<script src="js/index_php.js"></script>
-	<script src="js/jquery.js"></script>
+	<link rel="shortcut icon" href="/img/logo.png">
+	<link rel="stylesheet" href="/scss/index.css">
+	<?php echo '<script'; ?>
+ src="/js/index.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="/js/index_php.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="/js/jquery.js"><?php echo '</script'; ?>
+>
 </head>
 
 <body>
@@ -16,7 +45,7 @@
 <!--	MENU-->
 	<div class="menu">
 		<div class="logo">
-			<img src="img/logo.png">
+			<img src="/img/logo.png">
 		</div>
 		<div class="name">NoteHolder</div>
 		<div class="btn log_menu_btn">Login</div>
@@ -26,7 +55,7 @@
 <!--	CONTENT-->
 	<div class="content">
 		<div class="logo2">
-			<img src="img/logo.png">
+			<img src="/img/logo.png">
 		</div>
 		<h1>Welcome to NoteHolder!</h1>
 		<p class="content1">
@@ -37,31 +66,31 @@
 	
 	<div class="icons">
 		<div class="icon icon1">
-		<img src="img/icons/note.png">
+		<img src="/img/icons/note.png">
 		</div>
 	
 		<div class="icon icon2">
-		<img src="img/icons/image.png">
+		<img src="/img/icons/image.png">
 		</div>
 
 		<div class="icon icon3">
-		<img src="img/icons/pen.png">
+		<img src="/img/icons/pen.png">
 		</div>
 		
 		<div class="icon icon4">
-		<img src="img/icons/file.png">
+		<img src="/img/icons/file.png">
 		</div>
 		
 		<div class="icon icon5">
-		<img src="img/icons/folder.png">
+		<img src="/img/icons/folder.png">
 		</div>
 		
 		<div class="icon icon6">
-		<img src="img/icons/mark.png">
+		<img src="/img/icons/mark.png">
 		</div>
 		
 		<div class="icon icon7">
-		<img src="img/icons/cloud.png">
+		<img src="/img/icons/cloud.png">
 		</div>
 	</div>
 		
@@ -88,4 +117,5 @@
 	<div class="back"></div>
 </body>
 	
-</html>
+</html><?php }
+}

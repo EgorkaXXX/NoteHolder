@@ -8,10 +8,6 @@ function getData(obj_form){
     return hData;
 }
 
-function formHide(form){
-    document.querySelector(form).style.top="-500px";
-}
-
 // регистрация нового пользователя
 function RegisterNewUser(){
     var postData = getData('.reg_form');
@@ -48,6 +44,9 @@ function AuthoriseUser(){
             
         if(data['success']){ 
                 LoginSuccess();
+				setTimeout(function(){
+                	window.location.href = "/main/";
+				}, 500);
             } else {
                 ShowAlert(data['message']);
             }
