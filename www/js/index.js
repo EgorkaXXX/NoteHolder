@@ -34,14 +34,7 @@ var elems = {
 'log_pass': document.querySelector(".log_pass"),
 'back': document.querySelector(".back"),
 'alert': document.querySelector(".alert"),
-'icons': document.querySelector(".icons"),
-'icon1': document.querySelector(".icon1"),
-'icon2': document.querySelector(".icon2"),
-'icon3': document.querySelector(".icon3"),
-'icon4': document.querySelector(".icon4"),
-'icon5': document.querySelector(".icon5"),
-'icon6': document.querySelector(".icon6"),
-'icon7': document.querySelector(".icon7")
+'icon': document.querySelector(".icon")
 }
 	
 //FUNCTIONS
@@ -100,20 +93,36 @@ HidePass = function(){
 	elems.log_pass.setAttribute("type", "password");
 }
 
+ChangeIcon = function(){
+	var i=1;
+	setInterval(function(){
+		elems.icon.style.right = "-400px";
+		
+		setTimeout(function(){
+			if(i==8){i=1;};
+			elems.icon.src = "/img/icons/icon"+i+".png";
+		},600);
+		
+		setTimeout(function(){
+			elems.icon.style.right = "100px";
+		},800);
+		
+		i++;	
+	},3000);
+	
+}
+
 
 	//PAGE ACTIONS
 
 	//menu&content appearence
+	//var icon_index = 1;
 	setTimeout(function(){elems.dbody.style.opacity=1;},500);
+	ChangeIcon();
 	
 	//icons appearence
-	setTimeout(function(){elems.icon1.style.opacity=1;},900);
-	setTimeout(function(){elems.icon2.style.opacity=1;},1300);
-	setTimeout(function(){elems.icon3.style.opacity=1;},1700);
-	setTimeout(function(){elems.icon4.style.opacity=1;},2100);
-	setTimeout(function(){elems.icon5.style.opacity=1;},2500);
-	setTimeout(function(){elems.icon6.style.opacity=1;},2900);
-	setTimeout(function(){elems.icon7.style.opacity=1;},3300);
+	
+	
 	
 	//menu animation
 	window.onscroll = function(){MenuAnim();}

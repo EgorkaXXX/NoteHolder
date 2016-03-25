@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-03-21 17:14:10
+/* Smarty version 3.1.29, created on 2016-03-25 18:38:26
   from "C:\OpenServer\domains\noteholder.local\views\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56f001b236e662_53692842',
+  'unifunc' => 'content_56f55b721aa552_12404185',
   'file_dependency' => 
   array (
     'd44ed3d26c7ffa79f4ca5612cf51a98c71c33aee' => 
     array (
       0 => 'C:\\OpenServer\\domains\\noteholder.local\\views\\index.tpl',
-      1 => 1458569649,
+      1 => 1458920305,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56f001b236e662_53692842 ($_smarty_tpl) {
+function content_56f55b721aa552_12404185 ($_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 
@@ -58,41 +58,12 @@ function content_56f001b236e662_53692842 ($_smarty_tpl) {
 			<img src="/img/logo.png">
 		</div>
 		<h1>Welcome to NoteHolder!</h1>
-		<p class="content1">
-			We provide a brand new way for you to organize everithyng has sense - many kinds of information, which can be important for you!</br></br>Text, links, pictures, drawnings... any files.</br></br>Feel free to create, organize and share notes any way you like!</br></br>Add folders, mark notes, sort them by name, color, date, share in social networks...</br></br>Use lots of usefull functions we present to you!</br></br>Just spend few seconds to register or login by clicking buttons on the top menu and you can start working!</br></br>We hope you will enjoy your usage experience on any platform we support - let it be desktop or mobile device, we will make everything for you to feel comfortly using NoteHolder!</br></br>Organize you minds simply!
+		<p>
+			We provide a brand new way for you to organize everithyng has sense - many kinds of information, which can be important for you!</br></br>Text, links, pictures, drawnings... any files.</br></br>Feel free to create, organize and share notes any way you like!</br></br>Add folders, mark notes, sort them by name, color, date, share in social networks...</br></br>Use lots of usefull functions we present to you!</br></br>Just spend few seconds to register or login by clicking buttons on the top menu and you can start working!</br></br>We hope you will enjoy your usage experience on any platform we support - let it be desktop or mobile device, we will make everything for you to feel comfortly using NoteHolder!</br></br>Organize you minds simply!</br></br>To contact us  write to noteholder@gmail.com</br></br>
 		</p>
-		<p class="content2">To contact us  write to noteholder@gmail.com</p>
 	</div>
-	
-	<div class="icons">
-		<div class="icon icon1">
-		<img src="/img/icons/note.png">
-		</div>
-	
-		<div class="icon icon2">
-		<img src="/img/icons/image.png">
-		</div>
-
-		<div class="icon icon3">
-		<img src="/img/icons/pen.png">
-		</div>
-		
-		<div class="icon icon4">
-		<img src="/img/icons/file.png">
-		</div>
-		
-		<div class="icon icon5">
-		<img src="/img/icons/folder.png">
-		</div>
-		
-		<div class="icon icon6">
-		<img src="/img/icons/mark.png">
-		</div>
-		
-		<div class="icon icon7">
-		<img src="/img/icons/cloud.png">
-		</div>
-	</div>
+<!--	ICONS-->
+		<img class="icon" src="/img/icons/icon1.png">
 		
 <!--	FORMS-->
 	<div class="form reg_form">

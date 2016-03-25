@@ -148,15 +148,9 @@ body {
   .content p {
     font-size: 1.5em; }
 
-.icons {
-  position: absolute;
-  top: 100px;
-  right: 100px;
-  width: 15%; }
-
 .icon {
-  opacity: 0;
-  padding: 10px;
+  position: fixed;
+  top: 30%;
+  right: 100px;
+  width: 30%;
   transition: all 0.5s; }
-  .icon img {
-    width: 100%; }

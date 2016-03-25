@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-03-21 18:51:32
+/* Smarty version 3.1.29, created on 2016-03-22 20:42:57
   from "C:\OpenServer\domains\noteholder.local\views\main.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56f018843f3ab3_78039829',
+  'unifunc' => 'content_56f18421086166_65468873',
   'file_dependency' => 
   array (
     'c33a86ee1caf852706d0aabfc147aec42349c9b1' => 
     array (
       0 => 'C:\\OpenServer\\domains\\noteholder.local\\views\\main.tpl',
-      1 => 1458575491,
+      1 => 1458668573,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56f018843f3ab3_78039829 ($_smarty_tpl) {
+function content_56f18421086166_65468873 ($_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 
@@ -63,6 +63,8 @@ function content_56f018843f3ab3_78039829 ($_smarty_tpl) {
 			Folder 3
 		</div>
 	</div>
+<!--	PLEASE SELEC YOUR FOLDER-->
+	<div class="help">Please select your folder</br> on the left side menu</div>
 	
 	
 	</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>

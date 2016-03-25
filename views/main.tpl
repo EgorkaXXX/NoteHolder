@@ -34,6 +34,8 @@
 			Folder 3
 		</div>
 	</div>
+<!--	PLEASE SELEC YOUR FOLDER-->
+	<div class="help">Please select your folder</br> on the left side menu</div>
 	
 	
 	</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>

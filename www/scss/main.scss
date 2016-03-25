@@ -98,15 +98,25 @@ body{
 	border-radius: 5px;
 	cursor: pointer;
 	transition: $anim;
-	&:hover{
-		background: $light_indigo;
-	}
 	img{
-		width: 100%;	
+		width: 100%;
+		transition: $anim;
+	}
+	&:hover{
+		& img{
+			transform: scale(1.1,1.1);
+		}
 	}
 }
 
-
+//HELP
+.help{
+	font-size: 2em;
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	transition: $anim;
+}
 
 
 
