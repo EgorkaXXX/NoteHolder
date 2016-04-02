@@ -34,23 +34,16 @@ var elems = {
 'log_pass': document.querySelector(".log_pass"),
 'back': document.querySelector(".back"),
 'alert': document.querySelector(".alert"),
-'icon': document.querySelector(".icon")
+'icon': document.querySelector(".icon"),
+'slide1': document.querySelector(".slide1"),
+'slide2': document.querySelector(".slide2"),
+'slide3': document.querySelector(".slide3"),
+'nav_btns': document.querySelectorAll(".nav_btn")
 }
+
+var active=1;
 	
 //FUNCTIONS
-MenuAnim = function(){
-	var scroll = pageYOffset;
-	if(scroll>=15){
-		elems.logo.style.opacity="1"
-		elems.name.style.opacity="1";
-		elems.menu.style.boxShadow="0 0 25px lightgray";
-	}
-	if(scroll<15){
-		elems.logo.style.opacity="0"
-		elems.name.style.opacity="0";
-		elems.menu.style.boxShadow="0 0 0px lightgray";
-	}
-}
 
 ShowRegForm = function(){
 	elems.reg_form.style.top="150px";
@@ -93,40 +86,58 @@ HidePass = function(){
 	elems.log_pass.setAttribute("type", "password");
 }
 
-ChangeIcon = function(){
-	var i=1;
+NextSlide = function(){
+	if(active!=3){
+		document.querySelector(".slide"+active).classList.remove("active", "passive");
+		document.querySelector(".slide"+active).classList.add("passive");
+		active++;
+		document.querySelector(".slide"+active).classList.remove("active", "passive");
+		document.querySelector(".slide"+active).classList.add("active");
+	}
+}
+
+PrevSlide = function(){
+	if(active!=1){
+		document.querySelector(".slide"+active).classList.remove("active", "passive");
+		document.querySelector(".slide"+active).classList.add("passive");
+		active--;
+		document.querySelector(".slide"+active).classList.remove("active", "passive");
+		document.querySelector(".slide"+active).classList.add("active");
+	}
+}
+
+AnimButtons = function(){
 	setInterval(function(){
-		elems.icon.style.right = "-400px";
-		
-		setTimeout(function(){
-			if(i==8){i=1;};
-			elems.icon.src = "/img/icons/icon"+i+".png";
-		},600);
-		
-		setTimeout(function(){
-			elems.icon.style.right = "100px";
-		},800);
-		
-		i++;	
-	},3000);
-	
+		for(i=0; i<elems.nav_btns.length; i++){
+			if(elems.nav_btns[i].style.opacity==0){
+				elems.nav_btns[i].style.opacity=0.5;
+			}else if(elems.nav_btns[i].style.opacity==0.5){
+				elems.nav_btns[i].style.opacity=0;
+			}
+		}
+		console.log("changed");
+	},1000);
 }
 
 
 	//PAGE ACTIONS
 
 	//menu&content appearence
-	//var icon_index = 1;
-	setTimeout(function(){elems.dbody.style.opacity=1;},500);
-	ChangeIcon();
+	setTimeout(function(){elems.dbody.style.opacity=1;},500);	
+	AnimButtons();
 	
-	//icons appearence
-	
-	
-	
-	//menu animation
-	window.onscroll = function(){MenuAnim();}
-		
+	//scroll interactivity
+	document.onwheel = function(e){
+		if(e.deltaY>50){
+			NextSlide();
+			console.log("+");
+		}
+		if(e.deltaY<-50){
+			PrevSlide();
+			console.log("-");
+		}
+	}
+			
 	//login form
 	elems.log_menu_btn.onclick = function(){ShowLogForm();}
 	elems.log_cancel_btn.onclick = function(){HideForm();}

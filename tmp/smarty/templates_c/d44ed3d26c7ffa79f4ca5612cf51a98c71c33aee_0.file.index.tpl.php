@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-03-25 18:38:26
+/* Smarty version 3.1.29, created on 2016-04-02 17:46:22
   from "C:\OpenServer\domains\noteholder.local\views\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56f55b721aa552_12404185',
+  'unifunc' => 'content_56ffdb3e2ca8b3_67064111',
   'file_dependency' => 
   array (
     'd44ed3d26c7ffa79f4ca5612cf51a98c71c33aee' => 
     array (
       0 => 'C:\\OpenServer\\domains\\noteholder.local\\views\\index.tpl',
-      1 => 1458920305,
+      1 => 1459608378,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56f55b721aa552_12404185 ($_smarty_tpl) {
+function content_56ffdb3e2ca8b3_67064111 ($_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 
@@ -53,21 +53,74 @@ function content_56f55b721aa552_12404185 ($_smarty_tpl) {
 	</div>
 	
 <!--	CONTENT-->
-	<div class="content">
-		<div class="logo2">
-			<img src="/img/logo.png">
+	
+		<!--SLIDE1-->
+		<div class="slide slide1 active">
+			<!-- BUTTONS -->
+			<div class="nav_btn right_btn">
+			<img src="/img/right.png">
+			</div>
+			<!--CONTENT-->
+			<div class="text">
+				<h1>Welcome to NoteHolder!</h1>
+				<p>
+				We provide a brand new way for you to organize everithyng has sense - many kinds of information, which can be important for you!
+				Text, links, pictures, drawnings... any files.
+				</p>
+			</div>
+			<div class="pic">
+				<img src="/img/icons/icon1.png">
+			</div>
+			
 		</div>
-		<h1>Welcome to NoteHolder!</h1>
-		<p>
-			We provide a brand new way for you to organize everithyng has sense - many kinds of information, which can be important for you!</br></br>Text, links, pictures, drawnings... any files.</br></br>Feel free to create, organize and share notes any way you like!</br></br>Add folders, mark notes, sort them by name, color, date, share in social networks...</br></br>Use lots of usefull functions we present to you!</br></br>Just spend few seconds to register or login by clicking buttons on the top menu and you can start working!</br></br>We hope you will enjoy your usage experience on any platform we support - let it be desktop or mobile device, we will make everything for you to feel comfortly using NoteHolder!</br></br>Organize you minds simply!</br></br>To contact us  write to noteholder@gmail.com</br></br>
-		</p>
-	</div>
-<!--	ICONS-->
-		<img class="icon" src="/img/icons/icon1.png">
-		
+
+		<!--SLIDE2-->
+		<div class="slide slide2 passive">
+			<!-- BUTTONS -->
+			<div class="nav_btn left_btn">
+			<img src="/img/left.png">
+			</div>
+			<div class="nav_btn right_btn">
+			<img src="/img/right.png">
+			</div>
+			<!--CONTENT-->
+			<div class="text">
+				<h1>Use lots of usefull functions we present to you!</h1>
+				<p>
+				Feel free to create, organize and share information any way you like!
+				Add notes, folders, mark them, sort them by name, color, date, share in social networks...
+				Use lots of usefull functions we present to you!
+				</p>
+			</div>
+			<div class="pic">
+				<img src="/img/icons/icon3.png">
+			</div>
+			
+		</div>
+
+		<!--SLIDE3-->
+		<div class="slide slide3 passive">
+			<!-- BUTTONS -->
+			<div class="nav_btn left_btn">
+			<img src="/img/left.png">
+			</div>
+			<!--CONTENT-->
+			<div class="text">
+				<h1>Organize you minds simply!</h1>
+				<p>
+				Just spend few seconds to register or login by clicking buttons on the top menu and you can start working!
+				We hope you will enjoy your usage experience on any platform we support - let it be desktop or mobile device, we will make 		everything for you to feel comfortly using NoteHolder!
+				To contact us  write to noteholder@gmail.com
+				</p>
+			</div>
+			<div class="pic">
+				<img src="/img/icons/icon7.png">
+			</div>
+		</div>
+	
 <!--	FORMS-->
 	<div class="form reg_form">
-		<input class="field reg_email" type="text" placeholder="email" name="email">
+		<input class="field reg_email" type="email" placeholder="email" name="email">
 		<input class="field reg_pass" type="password" placeholder="password (no longer than 20 symbols)" name="pwd1" maxlength="20">
 		<input class="field reg_pass2" type="password" placeholder="retype password" name="pwd2" maxlength="20">
 		<div class="btn reg_btn">Register</div>
@@ -75,7 +128,7 @@ function content_56f55b721aa552_12404185 ($_smarty_tpl) {
 	</div>
 	
 	<div class="form log_form">
-		<input class="field log_email" type="text" placeholder="email" name="email">
+		<input class="field log_email" type="email" placeholder="email" name="email">
 		<input class="field log_pass" type="password" placeholder="password" name="pwd1">
 		<div class="show_pass_btn"></div>
 		<div class="btn log_btn">Login</div>

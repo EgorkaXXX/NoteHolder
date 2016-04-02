@@ -10,7 +10,7 @@ body {
   left: 0;
   background: #FFFFFF;
   width: 100%;
-  height: 80px;
+  height: 100px;
   transition: all 0.5s; }
   .menu .btn {
     position: absolute;
@@ -22,15 +22,8 @@ body {
 .logo {
   position: absolute;
   top: 10px;
-  left: 100px;
-  opacity: 0;
-  transition: all 0.5s; }
+  left: 100px; }
   .logo img {
-    height: 60px; }
-
-.logo2 {
-  position: absolute; }
-  .logo2 img {
     height: 60px; }
 
 .name {
@@ -40,7 +33,6 @@ body {
   font-size: 3em;
   font-weight: bolder;
   color: black;
-  opacity: 0;
   cursor: default;
   transition: all 0.5s; }
 
@@ -132,25 +124,49 @@ body {
   transition: all 0.5s; }
 
 /*CONTENT*/
-.content {
+.slide {
   position: absolute;
-  top: 100px;
+  transition: all 1s;
   left: 100px;
-  width: 40%;
-  height: 100%;
-  transition: all 0.5s; }
-  .content h1 {
-    padding-left: 60px;
-    display: inline;
-    width: 80%;
-    margin: 0;
-    font-size: 2.5em; }
-  .content p {
-    font-size: 1.5em; }
-
-.icon {
-  position: fixed;
-  top: 30%;
   right: 100px;
-  width: 30%;
-  transition: all 0.5s; }
+  top: 100px; }
+  .slide .text {
+    position: absolute;
+    width: 40%;
+    left: 0;
+    padding: 50px; }
+    .slide .text h1 {
+      font-size: 2.5em; }
+    .slide .text p {
+      font-size: 1.5em;
+      color: #727272; }
+  .slide .pic {
+    position: absolute;
+    width: 40%;
+    right: 0;
+    padding: 50px; }
+    .slide .pic img {
+      width: 100%; }
+
+.active {
+  opacity: 1; }
+
+.passive {
+  opacity: 0; }
+
+/*CONTENT BTNS*/
+.nav_btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 250px;
+  opacity: 0.5;
+  transition: all 1s; }
+  .nav_btn img {
+    width: 100%; }
+
+.left_btn {
+  left: 0; }
+
+.right_btn {
+  right: 0; }

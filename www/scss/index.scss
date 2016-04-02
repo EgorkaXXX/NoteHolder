@@ -24,7 +24,7 @@ body{
 	left: 0;
 	background: $white;
 	width: 100%;
-	height: 80px;
+	height: 100px;
 	transition: $anim;
 	
 	.btn{
@@ -40,15 +40,6 @@ body{
 	position: absolute;
 	top: 10px;
 	left: 100px;
-	opacity: 0;
-	transition: $anim;
-	img{
-		height: 60px;
-	}
-}
-
-.logo2{
-	position: absolute;
 	img{
 		height: 60px;
 	}
@@ -61,7 +52,6 @@ body{
 	font-size: 3em;
 	font-weight: bolder;
 	color: black;
-	opacity: 0;
 	cursor: default;
 	transition: $anim;
 }
@@ -169,29 +159,62 @@ body{
 
 /*CONTENT*/
 
-.content{
+.slide{
 	position: absolute;
-	top: 100px;
+	transition: all 1s;
 	left: 100px;
-	width: 40%;
-	height: 100%;
-	transition: $anim;
-	h1{
-		padding-left: 60px;
-		display: inline;
-		width: 80%;
-		margin: 0;
-		font-size: 2.5em;
+	right: 100px;
+	top: 100px;
+	.text{
+		position: absolute;
+		width: 40%;
+		left: 0;
+		padding: 50px;
+		h1{
+			font-size: 2.5em;
+		}
+		p{
+			font-size: 1.5em;
+			color: $gray;
+		}
 	}
-	p{
-		font-size: 1.5em;
+	.pic{
+		position: absolute;
+		width: 40%;
+		right: 0;
+		padding: 50px;
+		img{width: 100%;}
+	}
+
+}
+
+.active{
+	opacity: 1;
+}
+
+.passive{
+	opacity: 0;
+}
+
+
+/*CONTENT BTNS*/
+.nav_btn{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 250px;
+	opacity: 0.5;
+	transition: all 1s;
+	img{
+	width: 100%;
 	}
 }
 
-.icon{
-	position: fixed;
-	top: 30%;
-	right: 100px;
-	width: 30%;
-	transition: $anim;
+
+.left_btn{
+	left: 0;
+}
+
+.right_btn{
+	right: 0;
 }
