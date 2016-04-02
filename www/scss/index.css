@@ -134,9 +134,9 @@ body {
     position: absolute;
     width: 40%;
     left: 0;
-    padding: 50px; }
+    padding: 0 0 0 50px; }
     .slide .text h1 {
-      font-size: 2.5em; }
+      font-size: 2em; }
     .slide .text p {
       font-size: 1.5em;
       color: #727272; }
