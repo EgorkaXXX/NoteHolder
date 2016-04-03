@@ -161,7 +161,8 @@ body {
   height: 30px;
   top: 250px;
   opacity: 0.5;
-  transition: all 1s; }
+  transition: all 1s;
+  cursor: pointer; }
   .nav_btn img {
     width: 100%; }
 

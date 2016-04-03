@@ -38,7 +38,9 @@ var elems = {
 'slide1': document.querySelector(".slide1"),
 'slide2': document.querySelector(".slide2"),
 'slide3': document.querySelector(".slide3"),
-'nav_btns': document.querySelectorAll(".nav_btn")
+'nav_btns': document.querySelectorAll(".nav_btn"),
+'left_btn': document.querySelectorAll(".left_btn"),
+'right_btn': document.querySelectorAll(".right_btn")
 }
 
 var active=1;
@@ -128,16 +130,23 @@ AnimButtons = function(){
 	
 	//scroll interactivity
 	document.onwheel = function(e){
-		if(e.deltaY>50){
+		var delta = e.deltaY || e.detail || e.wheelDelta;
+		if(delta>=3){
 			NextSlide();
+			console.log(delta);
 			console.log("+");
 		}
-		if(e.deltaY<-50){
+		if(delta<=-3){
 			PrevSlide();
+			console.log(delta);
 			console.log("-");
 		}
 	}
-			
+	
+	//nav btns click
+	elems.left_btn.onclick = function(){PrevSlide();}
+	elems.right_btn.onclick = function(){NextSlide();}
+				
 	//login form
 	elems.log_menu_btn.onclick = function(){ShowLogForm();}
 	elems.log_cancel_btn.onclick = function(){HideForm();}
