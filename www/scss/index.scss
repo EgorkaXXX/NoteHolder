@@ -209,6 +209,9 @@ body{
 	img{
 	width: 100%;
 	}
+	&:hover{
+		transform: scale(2,2);
+	}
 }
 
 .left_btn{

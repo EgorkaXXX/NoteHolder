@@ -165,6 +165,8 @@ body {
   cursor: pointer; }
   .nav_btn img {
     width: 100%; }
+  .nav_btn:hover {
+    transform: scale(2, 2); }
 
 .left_btn {
   left: 0; }
