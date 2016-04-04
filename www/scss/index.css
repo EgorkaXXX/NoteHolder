@@ -73,9 +73,9 @@ body {
   position: fixed;
   top: -500px;
   left: 35%;
-  width: 250px;
+  width: 20%;
   height: 180px;
-  padding: 60px;
+  padding: 5%;
   background: #FFFFFF;
   box-shadow: 0 15px 30px #212121;
   transition: all 0.5s; }
