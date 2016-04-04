@@ -27,10 +27,6 @@
 	
 		<!--SLIDE1-->
 		<div class="slide slide1 active">
-			<!-- BUTTONS -->
-			<div class="nav_btn right_btn">
-			<img src="/img/right.png">
-			</div>
 			<!--CONTENT-->
 			<div class="text">
 				<h1>Welcome to NoteHolder!</h1>
@@ -42,18 +38,15 @@
 			<div class="pic">
 				<img src="/img/icons/icon1.png">
 			</div>
+			<!-- BUTTONS -->
+			<div class="nav_btn right_btn">
+				<img src="/img/right.png">
+			</div>
 			
 		</div>
 
 		<!--SLIDE2-->
 		<div class="slide slide2 passive">
-			<!-- BUTTONS -->
-			<div class="nav_btn left_btn">
-			<img src="/img/left.png">
-			</div>
-			<div class="nav_btn right_btn">
-			<img src="/img/right.png">
-			</div>
 			<!--CONTENT-->
 			<div class="text">
 				<h1>Use lots of usefull functions we present to you!</h1>
@@ -66,15 +59,18 @@
 			<div class="pic">
 				<img src="/img/icons/icon3.png">
 			</div>
+			<!-- BUTTONS -->
+			<div class="nav_btn left_btn">
+				<img src="/img/left.png">
+			</div>
+			<div class="nav_btn right_btn">
+				<img src="/img/right.png">
+			</div>
 			
 		</div>
 
 		<!--SLIDE3-->
 		<div class="slide slide3 passive">
-			<!-- BUTTONS -->
-			<div class="nav_btn left_btn">
-			<img src="/img/left.png">
-			</div>
 			<!--CONTENT-->
 			<div class="text">
 				<h1>Organize you minds simply!</h1>
@@ -87,6 +83,11 @@
 			<div class="pic">
 				<img src="/img/icons/icon7.png">
 			</div>
+			<!-- BUTTONS -->
+			<div class="nav_btn left_btn">
+				<img src="/img/left.png">
+			</div>
+			
 		</div>
 	
 <!--	FORMS-->

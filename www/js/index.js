@@ -111,10 +111,10 @@ PrevSlide = function(){
 AnimButtons = function(){
 	setInterval(function(){
 		for(i=0; i<elems.nav_btns.length; i++){
-			if(elems.nav_btns[i].style.opacity==0){
-				elems.nav_btns[i].style.opacity=0.5;
-			}else if(elems.nav_btns[i].style.opacity==0.5){
-				elems.nav_btns[i].style.opacity=0;
+			if(!elems.nav_btns[i].classList.contains("blinked")){
+				elems.nav_btns[i].classList.add("blinked");
+			}else if(elems.nav_btns[i].classList.contains("blinked")){
+				elems.nav_btns[i].classList.remove("blinked");
 			}
 		}
 		console.log("changed");
@@ -131,21 +131,23 @@ AnimButtons = function(){
 	//scroll interactivity
 	document.onwheel = function(e){
 		var delta = e.deltaY || e.detail || e.wheelDelta;
-		if(delta>=3){
+		if(delta>0){
 			NextSlide();
 			console.log(delta);
-			console.log("+");
 		}
-		if(delta<=-3){
+		if(delta<0){
 			PrevSlide();
 			console.log(delta);
-			console.log("-");
 		}
 	}
 	
 	//nav btns click
-	elems.left_btn.onclick = function(){PrevSlide();}
-	elems.right_btn.onclick = function(){NextSlide();}
+	for(i=0; i<elems.left_btn.length; i++){
+		elems.left_btn[i].addEventListener('click', PrevSlide);
+	}
+	for(i=0; i<elems.right_btn.length; i++){
+		elems.right_btn[i].addEventListener('click', NextSlide);
+	}
 				
 	//login form
 	elems.log_menu_btn.onclick = function(){ShowLogForm();}

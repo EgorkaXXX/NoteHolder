@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-02 17:46:22
+/* Smarty version 3.1.29, created on 2016-04-04 19:31:24
   from "C:\OpenServer\domains\noteholder.local\views\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56ffdb3e2ca8b3_67064111',
+  'unifunc' => 'content_570296dccb0341_00537880',
   'file_dependency' => 
   array (
     'd44ed3d26c7ffa79f4ca5612cf51a98c71c33aee' => 
     array (
       0 => 'C:\\OpenServer\\domains\\noteholder.local\\views\\index.tpl',
-      1 => 1459608378,
+      1 => 1459787475,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_56ffdb3e2ca8b3_67064111 ($_smarty_tpl) {
+function content_570296dccb0341_00537880 ($_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 
@@ -56,10 +56,6 @@ function content_56ffdb3e2ca8b3_67064111 ($_smarty_tpl) {
 	
 		<!--SLIDE1-->
 		<div class="slide slide1 active">
-			<!-- BUTTONS -->
-			<div class="nav_btn right_btn">
-			<img src="/img/right.png">
-			</div>
 			<!--CONTENT-->
 			<div class="text">
 				<h1>Welcome to NoteHolder!</h1>
@@ -71,18 +67,15 @@ function content_56ffdb3e2ca8b3_67064111 ($_smarty_tpl) {
 			<div class="pic">
 				<img src="/img/icons/icon1.png">
 			</div>
+			<!-- BUTTONS -->
+			<div class="nav_btn right_btn">
+				<img src="/img/right.png">
+			</div>
 			
 		</div>
 
 		<!--SLIDE2-->
 		<div class="slide slide2 passive">
-			<!-- BUTTONS -->
-			<div class="nav_btn left_btn">
-			<img src="/img/left.png">
-			</div>
-			<div class="nav_btn right_btn">
-			<img src="/img/right.png">
-			</div>
 			<!--CONTENT-->
 			<div class="text">
 				<h1>Use lots of usefull functions we present to you!</h1>
@@ -95,15 +88,18 @@ function content_56ffdb3e2ca8b3_67064111 ($_smarty_tpl) {
 			<div class="pic">
 				<img src="/img/icons/icon3.png">
 			</div>
+			<!-- BUTTONS -->
+			<div class="nav_btn left_btn">
+				<img src="/img/left.png">
+			</div>
+			<div class="nav_btn right_btn">
+				<img src="/img/right.png">
+			</div>
 			
 		</div>
 
 		<!--SLIDE3-->
 		<div class="slide slide3 passive">
-			<!-- BUTTONS -->
-			<div class="nav_btn left_btn">
-			<img src="/img/left.png">
-			</div>
 			<!--CONTENT-->
 			<div class="text">
 				<h1>Organize you minds simply!</h1>
@@ -116,6 +112,11 @@ function content_56ffdb3e2ca8b3_67064111 ($_smarty_tpl) {
 			<div class="pic">
 				<img src="/img/icons/icon7.png">
 			</div>
+			<!-- BUTTONS -->
+			<div class="nav_btn left_btn">
+				<img src="/img/left.png">
+			</div>
+			
 		</div>
 	
 <!--	FORMS-->
