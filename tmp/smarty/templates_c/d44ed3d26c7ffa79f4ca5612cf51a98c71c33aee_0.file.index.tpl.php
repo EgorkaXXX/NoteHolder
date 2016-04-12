@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-04 19:31:24
+/* Smarty version 3.1.29, created on 2016-04-08 14:06:32
   from "C:\OpenServer\domains\noteholder.local\views\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570296dccb0341_00537880',
+  'unifunc' => 'content_570790b86c8435_38712979',
   'file_dependency' => 
   array (
     'd44ed3d26c7ffa79f4ca5612cf51a98c71c33aee' => 
     array (
       0 => 'C:\\OpenServer\\domains\\noteholder.local\\views\\index.tpl',
-      1 => 1459787475,
+      1 => 1460113591,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_570296dccb0341_00537880 ($_smarty_tpl) {
+function content_570790b86c8435_38712979 ($_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 
@@ -121,17 +121,17 @@ function content_570296dccb0341_00537880 ($_smarty_tpl) {
 	
 <!--	FORMS-->
 	<div class="form reg_form">
-		<input class="field reg_email" type="email" placeholder="email" name="email">
-		<input class="field reg_pass" type="password" placeholder="password (no longer than 20 symbols)" name="pwd1" maxlength="20">
-		<input class="field reg_pass2" type="password" placeholder="retype password" name="pwd2" maxlength="20">
+		<div class="field_wrap"><input class="field reg_email" type="email" placeholder="email" name="email"><span class="underline"></span></div>
+		<div class="field_wrap"><input class="field reg_pass" type="password" placeholder="password (no longer than 20 symbols)" name="pwd1" maxlength="20"><span class="underline"></span></div>
+		<div class="field_wrap"> <input class="field reg_pass2" type="password" placeholder="retype password" name="pwd2" maxlength="20"><span class="underline"></span></div>
 		<div class="btn reg_btn">Register</div>
 		<div class="btn reg_cancel_btn">Cancel</div>
 	</div>
 	
 	<div class="form log_form">
-		<input class="field log_email" type="email" placeholder="email" name="email">
-		<input class="field log_pass" type="password" placeholder="password" name="pwd1">
-		<div class="show_pass_btn"></div>
+		<div class="field_wrap"><input class="field log_email" type="email" placeholder="email" name="email"><span class="underline"></span></div>
+		<div class="field_wrap"> <span class="show_pass_btn"><img src="/img/eye.svg"></span><input class="field log_pass" type="password" placeholder="password" name="pwd1" maxlength="20"><span class="underline"></span></div>
+		<!--<div class="show_pass_btn"></div>-->
 		<div class="btn log_btn">Login</div>
 		<div class="btn log_cancel_btn">Cancel</div>
 	</div>

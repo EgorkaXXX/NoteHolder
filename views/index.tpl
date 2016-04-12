@@ -92,17 +92,17 @@
 	
 <!--	FORMS-->
 	<div class="form reg_form">
-		<input class="field reg_email" type="email" placeholder="email" name="email">
-		<input class="field reg_pass" type="password" placeholder="password (no longer than 20 symbols)" name="pwd1" maxlength="20">
-		<input class="field reg_pass2" type="password" placeholder="retype password" name="pwd2" maxlength="20">
+		<div class="field_wrap"><input class="field reg_email" type="email" placeholder="email" name="email"><span class="underline"></span></div>
+		<div class="field_wrap"><input class="field reg_pass" type="password" placeholder="password (no longer than 20 symbols)" name="pwd1" maxlength="20"><span class="underline"></span></div>
+		<div class="field_wrap"> <input class="field reg_pass2" type="password" placeholder="retype password" name="pwd2" maxlength="20"><span class="underline"></span></div>
 		<div class="btn reg_btn">Register</div>
 		<div class="btn reg_cancel_btn">Cancel</div>
 	</div>
 	
 	<div class="form log_form">
-		<input class="field log_email" type="email" placeholder="email" name="email">
-		<input class="field log_pass" type="password" placeholder="password" name="pwd1">
-		<div class="show_pass_btn"></div>
+		<div class="field_wrap"><input class="field log_email" type="email" placeholder="email" name="email"><span class="underline"></span></div>
+		<div class="field_wrap"> <span class="show_pass_btn"><img src="/img/eye.svg"></span><input class="field log_pass" type="password" placeholder="password" name="pwd1" maxlength="20"><span class="underline"></span></div>
+		<!--<div class="show_pass_btn"></div>-->
 		<div class="btn log_btn">Login</div>
 		<div class="btn log_cancel_btn">Cancel</div>
 	</div>

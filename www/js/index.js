@@ -78,13 +78,11 @@ HideForm = function(){
 	setTimeout(function(){elems.back.style.zIndex="-1";}, 800);
 }
 	
-ShowPass = function(){
-	elems.show_pass_btn.style.background=color.gray;
-	elems.log_pass.setAttribute("type", "text");
+ShowPass = function(){	
+	elems.log_pass.setAttribute("type", "text");	
 }
 
 HidePass = function(){
-	elems.show_pass_btn.style.background=color.light;
 	elems.log_pass.setAttribute("type", "password");
 }
 
@@ -127,6 +125,17 @@ AnimButtons = function(){
 	//menu&content appearence
 	setTimeout(function(){elems.dbody.style.opacity=1;},500);	
 	AnimButtons();
+	
+	//PasswordShow
+	$(".show_pass_btn").mousedown( function(){
+		$(this).parent(".field_wrap").find(".field").addClass("focus");		
+	});
+	
+	
+	$(".field").focus(function(){
+		$(".field").removeClass("focus");		
+	});
+	
 	
 	//scroll interactivity
 	document.onwheel = function(e){
