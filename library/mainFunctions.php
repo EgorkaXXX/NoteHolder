@@ -1,13 +1,30 @@
 <?php
 /**
+ * Получение входных данных
+ * 
+ * @return type массив входных данных
+ */
+function requestParams(){
+    $reqData = null;
+    
+    $reqData['email'] = isset($_REQUEST['email']) ? trim($_REQUEST['email']) : null;
+    $reqData['pwd1'] = isset($_REQUEST['pwd1']) ? trim($_REQUEST['pwd1']) : null;
+    $reqData['pwd2'] = isset($_REQUEST['pwd2']) ? trim($_REQUEST['pwd2']) : null;
+    $reqData['name'] = $reqData['email'];
+
+    return $reqData;
+}
+
+/**
  * Форматирование запришваемой страницы
  * 
  * @param type $controllerName название контроллера
  * @param type $actionName название функции обработки страницы
  */
-function loadPage($smarty ,$controllerName, $actionName = 'index') {
-    include_once PathPrefix . $controllerName . PathPostfix;
-      
+function loadPage($smarty, $controllerName, $actionName) {
+ 
+    include_once PathPrefix . checkAuthStatus($controllerName) . PathPostfix;
+    
     $function = $actionName . 'Action';
     $function($smarty);
 }
@@ -55,6 +72,21 @@ function createSmartyRsArray($rs){
    
     return $smartyRs;
     
+}
+
+function checkAuthStatus($controllerName){
+
+    if($controllerName == 'Main'){
+        
+        if ($_SESSION['email']) {
+            $controllerName = 'Main';
+        } else {
+           $controllerName = 'Index';
+        }
+
+    }
+
+    return $controllerName;
 }
 
 

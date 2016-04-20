@@ -1,8 +1,8 @@
 <?php
 
 function indexAction($smarty){
-    
-    $smarty->assign('pageTitle', 'Main'); 
+ 
+    $smarty->assign('pageTitle', 'NoteHolder'); 
     
     loadTemplate($smarty, 'main');
 }
