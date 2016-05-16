@@ -24,16 +24,18 @@
 	<div class="folders">
 	</div>
 <!--	FOLDER BTNS-->
-	<button class="folder_btn create_folder" onclick="CreateFolder();">CreateFolder();</button>
-	<button class="folder_btn remove_folder" onclick="RemoveFolder();">RemoveFolder();</button>
-        <button class="folder_btn create_note" onclick="CreateNote();">CreateNote();</button>
-	<button class="folder_btn remove_note" onclick="RemoveNote();">RemoveNote();</button>
+	<div class="buttons">
+    	<button class="action_btn create_note" onclick="CreateNote();">Create Note</button>
+		<button class="action_btn remove_note" onclick="RemoveNote();">Remove Note</button>
+		<button class="action_btn create_folder" onclick="CreateFolder();">Create Folder</button>
+		<button class="action_btn remove_folder" onclick="RemoveFolder();">Remove Folder</button>
+	</div>
 <!--	PLEASE SELEC YOUR FOLDER-->
-        <div class="help">Please, select your folder</br> on the left side menu.</div>
+    <div class="help">Please, select your folder</br> on the left side menu.</div>
 <!--CONTEXT MENU-->
-        <div class="new_folder">
-            <input type="hidden" name="folder_name" id="folder_name"></input>
-        </div>
+    <div class="new_folder">
+        <input type="hidden" name="folder_name" id="folder_name"></input>
+    </div>
 	<div class="cotext"></div>
 	
 	

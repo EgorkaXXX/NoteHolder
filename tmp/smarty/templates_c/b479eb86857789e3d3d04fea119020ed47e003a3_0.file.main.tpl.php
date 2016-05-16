@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-05-12 20:55:27
+/* Smarty version 3.1.29, created on 2016-05-16 17:43:08
   from "C:\OpenServer\domains\noteholder-master.local\views\main.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5734c38f8523a3_52579661',
+  'unifunc' => 'content_5739dc7c83a2a0_96529075',
   'file_dependency' => 
   array (
     'b479eb86857789e3d3d04fea119020ed47e003a3' => 
     array (
       0 => 'C:\\OpenServer\\domains\\noteholder-master.local\\views\\main.tpl',
-      1 => 1463075725,
+      1 => 1463409787,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5734c38f8523a3_52579661 ($_smarty_tpl) {
+function content_5739dc7c83a2a0_96529075 ($_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 
@@ -53,16 +53,18 @@ function content_5734c38f8523a3_52579661 ($_smarty_tpl) {
 	<div class="folders">
 	</div>
 <!--	FOLDER BTNS-->
-	<button class="folder_btn create_folder" onclick="CreateFolder();">CreateFolder();</button>
-	<button class="folder_btn remove_folder" onclick="RemoveFolder();">RemoveFolder();</button>
-        <button class="folder_btn create_note" onclick="CreateNote();">CreateNote();</button>
-	<button class="folder_btn remove_note" onclick="RemoveNote();">RemoveNote();</button>
+	<div class="buttons">
+    	<button class="action_btn create_note" onclick="CreateNote();">Create Note</button>
+		<button class="action_btn remove_note" onclick="RemoveNote();">Remove Note</button>
+		<button class="action_btn create_folder" onclick="CreateFolder();">Create Folder</button>
+		<button class="action_btn remove_folder" onclick="RemoveFolder();">Remove Folder</button>
+	</div>
 <!--	PLEASE SELEC YOUR FOLDER-->
-        <div class="help">Please, select your folder</br> on the left side menu.</div>
+    <div class="help">Please, select your folder</br> on the left side menu.</div>
 <!--CONTEXT MENU-->
-        <div class="new_folder">
-            <input type="hidden" name="folder_name" id="folder_name"></input>
-        </div>
+    <div class="new_folder">
+        <input type="hidden" name="folder_name" id="folder_name"></input>
+    </div>
 	<div class="cotext"></div>
 	
 	
