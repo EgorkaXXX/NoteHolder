@@ -1,19 +1,7 @@
 <?php
-/**
- * Получение входных данных
- * 
- * @return type массив входных данных
- */
-function requestParams(){
-    $reqData = null;
-    
-    $reqData['email'] = isset($_REQUEST['email']) ? trim($_REQUEST['email']) : null;
-    $reqData['pwd1'] = isset($_REQUEST['pwd1']) ? trim($_REQUEST['pwd1']) : null;
-    $reqData['pwd2'] = isset($_REQUEST['pwd2']) ? trim($_REQUEST['pwd2']) : null;
-    $reqData['name'] = $reqData['email'];
 
-    return $reqData;
-}
+include_once 'checkF.php';
+include_once 'recieveDataF.php';
 
 /**
  * Форматирование запришваемой страницы
@@ -63,30 +51,15 @@ function d($value = null, $die = 1) {
  */
 
 function createSmartyRsArray($rs){
-    if(! $rs) return false;
+    if(! $rs){
+        return false;
+    }
     
     $smartyRs = array();
     while($row = mysql_fetch_assoc($rs)) {
         $smartyRs[] = $row;
     }
    
-    return $smartyRs;
-    
+    return $smartyRs;   
 }
-
-function checkAuthStatus($controllerName){
-
-    if($controllerName == 'Main'){
-        
-        if ($_SESSION['email']) {
-            $controllerName = 'Main';
-        } else {
-           $controllerName = 'Index';
-        }
-
-    }
-
-    return $controllerName;
-}
-
 

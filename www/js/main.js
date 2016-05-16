@@ -25,24 +25,55 @@ var elems = {
 	
 }
 var folder = elems.folders.childNodes;
-	
+var folderName;
 //FUNCTIONS
 InitFolders = function(){
-	for(i=0; i<folder.length; i++){
+        
+	for(i=0; i < folder.length; i++){
 			folder[i].addEventListener('click', SelectFolder);
-			console.log(folder[i]);
+			//console.log(folder[i]);
 		}
 }
 
+ViewFolders = function(){
+    var postData = true;
+    
+    $.ajax({
+        type:'POST',
+        async: true,
+        url:"?controller=folder&action=vfolders",
+        data: postData,
+        dataType: 'json',
+        success: function(data){           
+            for(var i = 0; i < data.length; i++){
+                f = document.createElement("div");
+                f.className = "folder folder_" + data[i]['name'];
+                f.innerHTML = '<img src="/img/icons/folder.png">' + data[i]['name']+'</img>';
+                elems.folders.appendChild(f);
+            }
+            InitFolders();
+        }
+ 
+    });
+}
+
 CreateFolder = function(){
-	f = document.createElement("div");
-	f_name = prompt("Enter folder name");
-	if(f_name!=""&&f_name!=null){
-		f.className = "folder folder_"+f_name;
-		f.innerHTML = '<img src="/img/icons/folder.png">'+f_name;
-		elems.folders.appendChild(f);
+	if(document.getElementsByClassName("folder").length<5){
+		
+    	f = document.createElement("div");
+    	f_name = prompt("Enter folder name");
+    	if(f_name!=""&&f_name!=null){
+    	        f.className = "folder folder_"+f_name;
+    	        f.innerHTML = '<img src="/img/icons/folder.png">'+f_name+'</img>';
+    	        elems.folders.appendChild(f);
+    	}
+    	document.getElementById('folder_name').value = f_name;
+    	AddNewFolder();
+    	InitFolders();
+		
+	}else{
+		alert("You have reached max folders amount!");
 	}
-	InitFolders();
 }
 
 RemoveFolder = function(){
@@ -52,6 +83,8 @@ RemoveFolder = function(){
 	setTimeout(function(){
 		elems.help.style.opacity=1;
 	},500);
+        
+        DeleteFolder();
 	InitFolders();
 }
 
@@ -66,6 +99,10 @@ SelectFolder = function(){
 	}
 	window.t = this;
 	this.style.background = color.light_indigo;
+        var postData = this.innerHTML;
+        folderName = postData.split("img src=\"/img/icons/folder.png\">");
+        document.getElementById('folder_name').value = folderName[1];
+        
 }
 
 ContextMenu = function(){
@@ -87,8 +124,8 @@ Logout = function(){
 	//PAGE ACTIONS
 	//page load
 	setTimeout(function(){elems.dbody.style.opacity=1;},500);
-	InitFolders();
-	window.t = null;
+        ViewFolders();
+        window.t = null;
 	
 	//settings&logout
 	elems.logout_menu_btn.onclick = function(){Logout();};
@@ -98,4 +135,7 @@ Logout = function(){
 	
 	//	
 	console.log("script_loaded");
+	console.log(folder);
+	
 }
+
