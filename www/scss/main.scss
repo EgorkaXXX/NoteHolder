@@ -85,11 +85,12 @@ body{
 	position: fixed;
 	z-index: 1;
 	width: 100px;
-	height: 100%;
 	top: 80px;
+	bottom: 80px;
 	left: 0;
 	box-shadow: 0 0 15px lightgray;
 	transition: $anim;
+	overflow-y: scroll;
 }
 
 .folder{

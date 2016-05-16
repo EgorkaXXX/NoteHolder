@@ -58,22 +58,16 @@ ViewFolders = function(){
 }
 
 CreateFolder = function(){
-	if(document.getElementsByClassName("folder").length<5){
-		
-    	f = document.createElement("div");
-    	f_name = prompt("Enter folder name");
-    	if(f_name!=""&&f_name!=null){
-    	        f.className = "folder folder_"+f_name;
-    	        f.innerHTML = '<img src="/img/icons/folder.png">'+f_name+'</img>';
-    	        elems.folders.appendChild(f);
-    	}
-    	document.getElementById('folder_name').value = f_name;
-    	AddNewFolder();
-    	InitFolders();
-		
-	}else{
-		alert("You have reached max folders amount!");
-	}
+    f = document.createElement("div");
+    f_name = prompt("Enter folder name");
+    if(f_name!=""&&f_name!=null){
+            f.className = "folder folder_"+f_name;
+            f.innerHTML = '<img src="/img/icons/folder.png">'+f_name+'</img>';
+            elems.folders.appendChild(f);
+    }
+    document.getElementById('folder_name').value = f_name;
+    AddNewFolder();
+    InitFolders();
 }
 
 RemoveFolder = function(){
@@ -131,7 +125,7 @@ Logout = function(){
 	elems.logout_menu_btn.onclick = function(){Logout();};
 	
 	//context
-	window.oncontextmenu = function(){ContextMenu();return false;};
+	window.oncontextmenu = function(){ContextMenu();/*return false;*/};
 	
 	//	
 	console.log("script_loaded");
