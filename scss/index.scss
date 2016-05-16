@@ -1,0 +1,154 @@
+$dark_indigo:   #303F9F;
+$indigo: 	 	#3F51B5;
+$light_indigo:  #C5CAE9;
+$white:    	 	#FFFFFF;
+$orange:     	#FF5722;
+$dark:    		#212121;
+$gray:  		#727272;
+$light:     	#B6B6B6;
+
+
+
+body{
+	font-family: roboto, sans-serif;
+	transition: all 0.5s;
+}
+
+.menu{
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	background: $white;
+	width: 100%;
+	height: 80px;
+	transition: box-shadow 0.5s;
+	
+	.btn{
+		position: absolute;
+		width: 100px;
+		height: 20px;
+		top: 20px;
+		padding: 10px;
+	}
+}
+
+.logo{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	
+	img{
+		height: 60px;
+	}
+}
+
+.name{
+	position: absolute;
+	top: 10px;
+	left: 120px;
+	font-size: 3em;
+	font-weight: bolder;
+	color: white;
+	transition: color 0.5s;
+}
+
+.btn{
+	background: white;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	box-shadow: 0 0 0px lightgray;
+	border-radius: 5px;
+	transition: all 0.5s;
+	color: $orange;
+	&:hover{background: $light_indigo;}
+
+}
+
+.back{
+	z-index: -1; 
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: rgba(0,0,0,0.5);
+	transition: opacity 1s;
+	opacity:0;
+}
+
+/*MENU BUTTONS*/
+
+.log_menu_btn{
+	right: 60px;
+}
+
+.reg_menu_btn{
+	right: 220px;
+}
+
+/*FORMS*/
+
+.form{
+	z-index: 5;
+	position: fixed;
+	top: -500px;
+	left: 35%;
+	width: 20%;
+	height: 180px;
+	padding: 60px;
+	background: white;
+	box-shadow: 0 15px 30px black;
+	transition: top 0.5s;
+	
+	.btn{
+		padding: 10px 0 10px 0;
+		margin-bottom: 10px;
+		width: 100%;
+	}
+}
+
+.reg_form{
+	height: 220px;
+	
+}
+
+.field{
+	border: none;
+	width: 100%;
+	height: 30px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid $light_indigo;
+	transition: all 0.5s;
+	&:focus{border-bottom: 2px solid $indigo;}
+}
+
+/*CONTENT*/
+
+.content{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 40%;
+	height: 1200px;
+	padding: 20px;
+	background: white;
+	box-shadow: 0 0 5px lightgray;
+}
+
+.content h1{
+	margin: 0;
+	font-size: 3em;
+}
+
+.screen1{
+	position: absolute;
+	top: 100px;
+	right: 60px;
+	width: 30%;
+	height: 200px;
+	box-shadow: 0 0 5px lightgray;
+}
+

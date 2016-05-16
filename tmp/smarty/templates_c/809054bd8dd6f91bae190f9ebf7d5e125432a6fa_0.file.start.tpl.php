@@ -45,7 +45,7 @@ function content_56e83141371357_02493719 ($_smarty_tpl) {
 <!--	MENU-->
 	<div class="menu">
 		<div class="logo">
-			<img src="img/logo.png" height="60px">
+			<img src="img/logo.png">
 		</div>
 		<div class="name">Note Holder</div>
 		<div class="btn log_btn_menu">Login</div>
