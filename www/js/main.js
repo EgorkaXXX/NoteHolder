@@ -22,6 +22,10 @@ var elems = {
 	'logout_menu_btn': document.querySelector(".logout_menu_btn"),
 	'folders': document.querySelector(".folders"),
 	'help': document.querySelector(".help"),
+	'create_note_btn': document.querySelector(".create_note"),
+	'remove_note_btn': document.querySelector(".remove_note"),
+	'create_folder_btn': document.querySelector(".create_folder"),
+	'remove_folder_btn': document.querySelector(".remove_folder")
 	
 }
 var folder = elems.folders.childNodes;
@@ -59,14 +63,17 @@ ViewFolders = function(){
 
 CreateFolder = function(){
     f = document.createElement("div");
-    f_name = prompt("Enter folder name");
-    if(f_name!=""&&f_name!=null){
-            f.className = "folder folder_"+f_name;
+    f_name = prompt("Enter folder name (no longer than 7 symbols!)");
+	
+	if(f_name==""){alert("Please, enter folder name!");}
+	else if(f_name>7){alert("Folder name is too long!");}
+	else if(f_name!=null){
+			f.className = "folder folder_"+f_name;
             f.innerHTML = '<img src="/img/icons/folder.png">'+f_name+'</img>';
             elems.folders.appendChild(f);
-    }
-    document.getElementById('folder_name').value = f_name;
-    AddNewFolder();
+		document.getElementById('folder_name').value = f_name;
+    	AddNewFolder();
+	}
     InitFolders();
 }
 
@@ -123,6 +130,12 @@ Logout = function(){
 	
 	//settings&logout
 	elems.logout_menu_btn.onclick = function(){Logout();};
+
+	//Notes&Folders
+	elems.create_note_btn.onclick = function(){CreateNote();};
+	elems.remove_note_btn.onclick = function(){RemoveNote();};
+	elems.create_folder_btn.onclick = function(){CreateFolder();};
+	elems.remove_folder_btn.onclick = function(){RemoveFolder();};
 	
 	//context
 	window.oncontextmenu = function(){ContextMenu();/*return false;*/};

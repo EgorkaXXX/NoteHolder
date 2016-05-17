@@ -21,17 +21,20 @@
 		<div class="btn logout_menu_btn">Logout</div>
 	</div>
 <!--	FOLDERS-->
-	<div class="folders">
-	</div>
-<!--	FOLDER BTNS-->
-	<div class="buttons">
-    	<button class="action_btn create_note" onclick="CreateNote();">Create Note</button>
-		<button class="action_btn remove_note" onclick="RemoveNote();">Remove Note</button>
-		<button class="action_btn create_folder" onclick="CreateFolder();">Create Folder</button>
-		<button class="action_btn remove_folder" onclick="RemoveFolder();">Remove Folder</button>
-	</div>
-<!--	PLEASE SELEC YOUR FOLDER-->
+	<div class="folders"></div>
+<!--	NOTES-->
+	<div class="notes"></div>
+	
+	
+<!--	PLEASE SELECT YOUR FOLDER-->
     <div class="help">Please, select your folder</br> on the left side menu.</div>
+<!--	ACTION BTNS-->
+	<div class="buttons">
+    	<button class="action_btn create_note">Create Note</button>
+		<button class="action_btn remove_note">Remove Note</button>
+		<button class="action_btn create_folder">Create Folder</button>
+		<button class="action_btn remove_folder">Remove Folder</button>
+	</div>
 <!--CONTEXT MENU-->
     <div class="new_folder">
         <input type="hidden" name="folder_name" id="folder_name"></input>

@@ -90,13 +90,14 @@ body{
 	left: 0;
 	box-shadow: 0 0 15px lightgray;
 	transition: $anim;
-	overflow-y: scroll;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .folder{
-	width: 48px;
-	margin: 10px;
-	padding: 10px;
+	width: 60px;
+	margin: 7px;
+	padding: 7px;
 	border-radius: 5px;
 	cursor: pointer;
 	transition: $anim;
@@ -109,6 +110,16 @@ body{
 			transform: scale(1.1,1.1);
 		}
 	}
+}
+
+//NOTES
+.notes{
+	position: absolute;
+	top: 80px;
+	left: 100px;
+	bottom: 80px;
+	right: 0;
+	overflow: auto;
 }
 
 //BUTTONS
@@ -143,13 +154,13 @@ body{
 	left: 100px;
 }
 .remove_note{
-	left: 300px;
+	left: 250px;
 }
 .create_folder{
-	right: 100px;
+	right: 250px;
 }
 .remove_folder{
-	right: 300px;
+	right: 100px;
 }
 
 
