@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-05-17 15:02:37
+/* Smarty version 3.1.29, created on 2016-05-18 17:24:24
   from "C:\OpenServer\domains\noteholder-master.local\views\main.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_573b085d4f6ac6_45376186',
+  'unifunc' => 'content_573c7b18239cc3_00655802',
   'file_dependency' => 
   array (
     'b479eb86857789e3d3d04fea119020ed47e003a3' => 
     array (
       0 => 'C:\\OpenServer\\domains\\noteholder-master.local\\views\\main.tpl',
-      1 => 1463486489,
+      1 => 1463581462,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_573b085d4f6ac6_45376186 ($_smarty_tpl) {
+function content_573c7b18239cc3_00655802 ($_smarty_tpl) {
 ?>
 <!DOCTYPE HTML>
 
@@ -53,8 +53,6 @@ function content_573b085d4f6ac6_45376186 ($_smarty_tpl) {
 	<div class="folders"></div>
 <!--	NOTES-->
 	<div class="notes"></div>
-	
-	
 <!--	PLEASE SELECT YOUR FOLDER-->
     <div class="help">Please, select your folder</br> on the left side menu.</div>
 <!--	ACTION BTNS-->

@@ -24,8 +24,6 @@
 	<div class="folders"></div>
 <!--	NOTES-->
 	<div class="notes"></div>
-	
-	
 <!--	PLEASE SELECT YOUR FOLDER-->
     <div class="help">Please, select your folder</br> on the left side menu.</div>
 <!--	ACTION BTNS-->

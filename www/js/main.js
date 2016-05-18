@@ -21,6 +21,7 @@ var elems = {
 	'settings_menu_btn': document.querySelector(".settings_menu_btn"),
 	'logout_menu_btn': document.querySelector(".logout_menu_btn"),
 	'folders': document.querySelector(".folders"),
+	'notes': document.querySelector(".notes"),
 	'help': document.querySelector(".help"),
 	'create_note_btn': document.querySelector(".create_note"),
 	'remove_note_btn': document.querySelector(".remove_note"),
@@ -30,6 +31,9 @@ var elems = {
 }
 var folder = elems.folders.childNodes;
 var folderName;
+
+var note = elems.notes.childNodes;
+
 //FUNCTIONS
 InitFolders = function(){
         
@@ -61,12 +65,13 @@ ViewFolders = function(){
     });
 }
 
+//FOLDERS
 CreateFolder = function(){
     f = document.createElement("div");
     f_name = prompt("Enter folder name (no longer than 7 symbols!)");
 	
 	if(f_name==""){alert("Please, enter folder name!");}
-	else if(f_name>7){alert("Folder name is too long!");}
+	else if(f_name.length>7){alert("Folder name is too long!");}
 	else if(f_name!=null){
 			f.className = "folder folder_"+f_name;
             f.innerHTML = '<img src="/img/icons/folder.png">'+f_name+'</img>';
@@ -103,9 +108,44 @@ SelectFolder = function(){
         var postData = this.innerHTML;
         folderName = postData.split("img src=\"/img/icons/folder.png\">");
         document.getElementById('folder_name').value = folderName[1];
+	InitNotes();
         
 }
 
+
+//NOTES
+InitNotes = function(){
+	for(i=0; i<note.length; i++){
+		if(note[i].className.indexOf(t.className.substring(7))+1){
+			note[i].style.display="block";
+		}else{
+			note[i].style.display="none";
+		}
+	}
+}
+
+CreateNote = function(){
+	if(t!=undefined){
+		n = document.createElement("div");
+		n_name = prompt("Please enter note name!");
+		
+		if(n_name==""){alert("Please, enter note name!");}
+		else if(n_name.length>20){alert("Note name is too long!");}
+		else if(n_name!=null){
+			n.className = "note note_"+n_name+" "+t.className.substring(7);
+			n.innerHTML = "<h1>"+n_name+"</h1><textarea></textarea>";
+			elems.notes.appendChild(n);
+		}
+	}else{
+		alert("Please select folder!");
+	}
+}
+
+RemoveNote = function(){
+	
+}
+
+//CONTEXT&OTHER
 ContextMenu = function(){
 	if(t!=null){
 		console.log("yes");
@@ -130,6 +170,7 @@ Logout = function(){
 	
 	//settings&logout
 	elems.logout_menu_btn.onclick = function(){Logout();};
+	elems.settings_menu_btn.onclick = function(){Settings();};
 
 	//Notes&Folders
 	elems.create_note_btn.onclick = function(){CreateNote();};
@@ -142,7 +183,6 @@ Logout = function(){
 	
 	//	
 	console.log("script_loaded");
-	console.log(folder);
 	
 }
 

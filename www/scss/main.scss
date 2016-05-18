@@ -122,6 +122,32 @@ body{
 	overflow: auto;
 }
 
+.note{
+	position: relative;
+	width: 21%;
+	height: 200px;
+	margin: 2%;
+	float: left;
+	box-shadow: 0 0 10px lightgray;
+	transition: $anim;
+	h1{
+		margin: 10px;
+		font-size: 1em;
+	}
+	textarea{
+		position: absolute;
+		width: 90%;
+		left: 5%;
+		top: 40px;
+		bottom: 10px;
+		border: none;
+		resize: none;
+	}
+	&:hover{
+		box-shadow: 0 0 15px gray;
+	}
+}
+
 //BUTTONS
 .buttons{
 	position: fixed;
@@ -170,6 +196,7 @@ body{
 	position: absolute;
 	top: 200px;
 	left: 200px;
+	cursor: default;
 	transition: $anim;
 }
 
