@@ -124,6 +124,7 @@ body{
 
 .note{
 	position: relative;
+	z-index: 5;
 	width: 21%;
 	height: 200px;
 	margin: 2%;
@@ -146,6 +147,14 @@ body{
 	&:hover{
 		box-shadow: 0 0 15px gray;
 	}
+}
+
+.back{
+	position: fixed;
+	top: 80px;
+	left: 100px;
+	width: 100%;
+	bottom: 80px;
 }
 
 //BUTTONS

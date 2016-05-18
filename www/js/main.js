@@ -22,6 +22,7 @@ var elems = {
 	'logout_menu_btn': document.querySelector(".logout_menu_btn"),
 	'folders': document.querySelector(".folders"),
 	'notes': document.querySelector(".notes"),
+	'back': document.querySelector(".back"),
 	'help': document.querySelector(".help"),
 	'create_note_btn': document.querySelector(".create_note"),
 	'remove_note_btn': document.querySelector(".remove_note"),
@@ -39,7 +40,6 @@ InitFolders = function(){
         
 	for(i=0; i < folder.length; i++){
 			folder[i].addEventListener('click', SelectFolder);
-			//console.log(folder[i]);
 		}
 }
 
@@ -71,7 +71,10 @@ CreateFolder = function(){
     f_name = prompt("Enter folder name (no longer than 7 symbols!)");
 	
 	for(i=0; i < folder.length; i++){
-			if(f_name==folder[i].className.substring(folder[i].className.length - f_name.length)){
+			f1 = folder[i].className.split(" ");
+			f2 = f1[1].split("_");
+		
+			if(f_name==f2[1]){
 				alert("This folder is already exists!");
 				f_name=null;
 			}
@@ -86,6 +89,7 @@ CreateFolder = function(){
 		document.getElementById('folder_name').value = f_name;
     	AddNewFolder();
 	}
+	DeselectNote();
     InitFolders();
 }
 
@@ -99,6 +103,7 @@ RemoveFolder = function(){
         
         DeleteFolder();
 	InitFolders();
+	DeselectNote();
 	InitNotes();
 }
 
@@ -116,6 +121,7 @@ SelectFolder = function(){
         var postData = this.innerHTML;
         folderName = postData.split("img src=\"/img/icons/folder.png\">");
         document.getElementById('folder_name').value = folderName[1];
+	DeselectNote();
 	InitNotes();
         
 }
@@ -124,6 +130,7 @@ SelectFolder = function(){
 //NOTES
 InitNotes = function(){
 	for(i=0; i<note.length; i++){
+		note[i].addEventListener('click', SelectNote);
 		if(t==null){
 			note[i].style.display="none";
 		}else if(t.className.substring(7)==note[i].className.substring(note[i].className.length - t.className.substring(7).length)){
@@ -149,10 +156,25 @@ CreateNote = function(){
 	}else{
 		alert("Please select folder!");
 	}
+	DeselectNote();
+	InitNotes();
 }
 
 RemoveNote = function(){
-	
+	elems.notes.removeChild(tn);
+	window.tn=null;
+	InitNotes();
+}
+
+SelectNote = function(){
+	if(tn!=null){tn.style.transform="scale(1,1)";}
+	window.tn = this;
+	tn.style.transform="scale(1.1,1.1)";
+}
+
+DeselectNote = function(){
+	if(tn!=null){tn.style.transform="scale(1,1)";}
+	window.tn = null;
 }
 
 //CONTEXT&OTHER
@@ -174,7 +196,9 @@ Logout = function(){
 	//page load
 	setTimeout(function(){elems.dbody.style.opacity=1;},500);
         ViewFolders();
+		InitNotes();
         window.t = null;
+		window.tn = null;
 	
 	//settings&logout
 	elems.logout_menu_btn.onclick = function(){Logout();};
@@ -185,6 +209,10 @@ Logout = function(){
 	elems.remove_note_btn.onclick = function(){RemoveNote();};
 	elems.create_folder_btn.onclick = function(){CreateFolder();};
 	elems.remove_folder_btn.onclick = function(){RemoveFolder();};
+
+	elems.back.onclick = function(){DeselectNote();};
+	elems.folders.onclick = function(){DeselectNote();};
+	elems.menu.onclick = function(){DeselectNote();};
 	
 	//context
 	window.oncontextmenu = function(){ContextMenu();/*return false;*/};
