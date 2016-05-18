@@ -70,6 +70,13 @@ CreateFolder = function(){
     f = document.createElement("div");
     f_name = prompt("Enter folder name (no longer than 7 symbols!)");
 	
+	for(i=0; i < folder.length; i++){
+			if(f_name==folder[i].className.substring(folder[i].className.length - f_name.length)){
+				alert("This folder is already exists!");
+				f_name=null;
+			}
+		}
+	
 	if(f_name==""){alert("Please, enter folder name!");}
 	else if(f_name.length>7){alert("Folder name is too long!");}
 	else if(f_name!=null){
@@ -92,6 +99,7 @@ RemoveFolder = function(){
         
         DeleteFolder();
 	InitFolders();
+	InitNotes();
 }
 
 SelectFolder = function(){
@@ -116,7 +124,9 @@ SelectFolder = function(){
 //NOTES
 InitNotes = function(){
 	for(i=0; i<note.length; i++){
-		if(note[i].className.indexOf(t.className.substring(7))+1){
+		if(t==null){
+			note[i].style.display="none";
+		}else if(t.className.substring(7)==note[i].className.substring(note[i].className.length - t.className.substring(7).length)){
 			note[i].style.display="block";
 		}else{
 			note[i].style.display="none";
@@ -159,8 +169,6 @@ Logout = function(){
 		elems.dbody.style.opacity=0;
 	}
 }	
-
-
 
 	//PAGE ACTIONS
 	//page load
