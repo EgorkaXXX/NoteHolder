@@ -170,6 +170,17 @@ AnimButtons = function(){
 	elems.reg_cancel_btn.onclick = function(){HideForm();}
 	elems.reg_btn.onclick = function(){RegisterNewUser();}
 	
+	//Enter
+	document.onkeyup = function(e){
+		if(e.keyCode==13){
+			if(elems.log_form.style.top=="150px"){
+				AuthoriseUser();
+			}else if(elems.reg_form.style.top=="150px"){
+				RegisterNewUser();
+			}
+		}
+	}
+	
 	//back click
 	elems.back.onclick = function(){HideForm();}
 	
