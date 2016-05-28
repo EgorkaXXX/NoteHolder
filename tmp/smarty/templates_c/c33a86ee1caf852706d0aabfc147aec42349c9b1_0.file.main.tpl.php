@@ -1,12 +1,41 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-05-28 15:47:56
+  from "C:\OpenServer\domains\noteholder.local\views\main.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_5749937c459e99_38673413',
+  'file_dependency' => 
+  array (
+    'c33a86ee1caf852706d0aabfc147aec42349c9b1' => 
+    array (
+      0 => 'C:\\OpenServer\\domains\\noteholder.local\\views\\main.tpl',
+      1 => 1464321146,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5749937c459e99_38673413 ($_smarty_tpl) {
+?>
 <!DOCTYPE HTML>
 
 <head>
 	<title>NoteHolder</title>
 	<link rel="shortcut icon" href="/img/logo.png">
 	<link rel="stylesheet" href="/scss/main.css">
-	<script src="/js/main.js"></script>
-	<script src="/js/main_php.js"></script>
-	<script src="/js/jquery.js"></script>
+	<?php echo '<script'; ?>
+ src="/js/main.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="/js/main_php.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="/js/jquery.js"><?php echo '</script'; ?>
+>
 	
 </head>
 
@@ -41,4 +70,5 @@
 	<div class="cotext"></div>
 	
 	
-</body>
+</body><?php }
+}

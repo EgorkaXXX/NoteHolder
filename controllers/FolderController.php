@@ -1,6 +1,7 @@
 <?php
 
 include_once '../models/FoldersModel.php';
+include_once '../models/NotesModel.php';
 
 /**
  * Creating new folder
@@ -8,7 +9,7 @@ include_once '../models/FoldersModel.php';
  */
 function cfolderAction(){
     $res = null;
-    $folderName = getFolderName();
+    $folderName = getItemName();
     
     if($folderName){
         $user_id = getCurrentUser();
@@ -22,16 +23,17 @@ function cfolderAction(){
 
 function rfolderAction(){
     $res = null;
-    $folderName = getFolderName();
+    $folderName = explode("&amp;nbsp", getItemName());
     
     if($folderName){
         $user_id = getCurrentUser();
-        $res = removeFolder($user_id, $folderName);
+        $folder_id = getSelectedFolder($user_id); 
+        $res = removeFolder($user_id, $folderName[0], $folder_id);
     } else {
         $res['success'] = 0;
     }
     
-    echo json_encode($res);
+    echo json_encode($folderName);
 }
 /**
  * View all current user`s folders

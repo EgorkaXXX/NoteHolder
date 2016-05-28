@@ -5,11 +5,18 @@
  * 
  * @return type     new folder name
  */
-function getFolderName() {
-    $folderName = trim(filter_input(INPUT_POST, "folder_name"));
-    $folderName = htmlspecialchars(mysql_real_escape_string($folderName));
+function getItemName() {
+    $itemName = trim(filter_input(INPUT_POST, "item_name"));
+    $itemName = htmlspecialchars(mysql_real_escape_string($itemName));
 
-    return $folderName;
+    return $itemName;
+}
+
+function getContent($noteName){
+    $content = trim(filter_input(INPUT_POST, $noteName));
+    $content = htmlspecialchars(mysql_real_escape_string($content));
+    
+    return $content;
 }
 
 /**
