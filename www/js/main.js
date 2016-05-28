@@ -18,7 +18,6 @@ var color = {
 var elems = {
 	'dbody': document.body,
 	'menu': document.querySelector(".menu"),
-	'settings_menu_btn': document.querySelector(".settings_menu_btn"),
 	'logout_menu_btn': document.querySelector(".logout_menu_btn"),
 	'folders': document.querySelector(".folders"),
 	'notes': document.querySelector(".notes"),
@@ -35,6 +34,7 @@ var folderName;
 
 var note = elems.notes.childNodes;
 var noteName;
+	
 //FUNCTIONS
 InitFolders = function(){
         
@@ -215,17 +215,10 @@ DeselectNote = function(){
 	window.tn = null;
 }
 
-//CONTEXT&OTHER
-ContextMenu = function(){
-	if(t!=null){
-		console.log("yes");
-	}
-}
-
 Logout = function(){
 	var ans = confirm("Do you really want to logout?");
-	LoggingOut();
 	if(ans){
+		LoggingOut();
 		elems.dbody.style.opacity=0;
 	}
 }	
@@ -235,13 +228,11 @@ Logout = function(){
 	setTimeout(function(){elems.dbody.style.opacity=1;},500);
         ViewFolders();
         ViewNotes();
-	//InitNotes();
         window.t = null;
-	window.tn = null;
+		window.tn = null;
 	
-	//settings&logout
+	//logout
 	elems.logout_menu_btn.onclick = function(){Logout();};
-	elems.settings_menu_btn.onclick = function(){Settings();};
 
 	//Notes&Folders
 	elems.create_note_btn.onclick = function(){CreateNote();};
@@ -252,10 +243,7 @@ Logout = function(){
 	elems.back.onclick = function(){DeselectNote();};
 	elems.folders.onclick = function(){DeselectNote();};
 	elems.menu.onclick = function(){DeselectNote();};
-	
-	//context
-	window.oncontextmenu = function(){ContextMenu();/*return false;*/};
-	
+		
 	//	
 	console.log("script_loaded");
 	
