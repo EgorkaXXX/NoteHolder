@@ -120,12 +120,8 @@ CreateFolder = function(){
 
 RemoveFolder = function(){
 	elems.folders.removeChild(t);
-        //elems.notes.removeChild(tn);
 	window.t = null;
 	elems.help.style.display = "block";
-	setTimeout(function(){
-		elems.help.style.opacity=1;
-	},1000);
     DeleteFolder();
 	InitFolders();
 	DeselectNote();
@@ -133,10 +129,7 @@ RemoveFolder = function(){
 }
 
 SelectFolder = function(){
-	elems.help.style.opacity = 0;
-	setTimeout(function(){
-		elems.help.style.display="none";
-	},1000);
+	elems.help.style.display="none";
 	
 	if(t!=undefined){
 		t.style.background = color.white;
@@ -151,6 +144,12 @@ SelectFolder = function(){
         
 }
 
+DeselectFolder = function(){
+	if(t!=null){t.style.background=color.white;}
+	window.t = null;
+	InitNotes();
+	elems.help.style.display = "block";
+}
 
 //NOTES
 InitNotes = function(){
@@ -242,7 +241,7 @@ Logout = function(){
 
 	elems.back.onclick = function(){DeselectNote();};
 	elems.folders.onclick = function(){DeselectNote();};
-	elems.menu.onclick = function(){DeselectNote();};
+	elems.menu.onclick = function(){DeselectNote();DeselectFolder();};
 		
 	//	
 	console.log("script_loaded");

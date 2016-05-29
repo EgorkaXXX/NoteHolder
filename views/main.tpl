@@ -17,6 +17,7 @@
 			<img src="/img/logo.png">
 		</div>
 		<div class="name">NoteHolder</div>
+		<div class="email">Welcome, {$email}!</div>
 		<div class="btn logout_menu_btn">Logout</div>
 	</div>
 <!--	FOLDERS-->
@@ -25,7 +26,7 @@
 	<div class="notes"></div>
 	<div class="back"></div>
 <!--	PLEASE SELECT YOUR FOLDER-->
-	<div class="help">Please, select</br> your folder on</br>the left side menu.</div> 
+	<div class="help">Please, select or create</br> your folder on</br>the left side menu.</div> 
 <!--	ACTION BTNS-->
 	<div class="buttons">
     	<button class="action_btn create_note">Create Note</button>

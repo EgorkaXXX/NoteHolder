@@ -18,11 +18,22 @@ body {
     width: 100px;
     height: 20px;
     top: 20px;
-    padding: 10px; }
+    padding: 10px;
+    background: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.5s;
+    color: #FF5722;
+    right: 100px; }
+    .menu .btn:hover {
+      background: #C5CAE9; }
 
 .logo {
   position: absolute;
   top: 10px;
+  bottom: 10px;
   left: 100px;
   transition: all 0.5s; }
   .logo img {
@@ -31,6 +42,7 @@ body {
 .name {
   position: absolute;
   top: 10px;
+  bottom: 10px;
   left: 160px;
   font-size: 3em;
   font-weight: bolder;
@@ -38,19 +50,14 @@ body {
   cursor: default;
   transition: all 0.5s; }
 
-.btn {
-  background: #FFFFFF;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
-  transition: all 0.5s;
-  color: #FF5722; }
-  .btn:hover {
-    background: #C5CAE9; }
-
-.logout_menu_btn {
-  right: 100px; }
+.email {
+  position: absolute;
+  font-size: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  top: 10px;
+  bottom: 10px;
+  left: 450px; }
 
 .folders {
   position: fixed;
@@ -105,7 +112,9 @@ body {
     bottom: 10px;
     border: none;
     resize: none;
-    outline: none; }
+    outline: none;
+    height: calc(100% - 50px);
+    box-sizing: border-box; }
   .note:hover {
     box-shadow: 0 0 15px lightgray; }
 

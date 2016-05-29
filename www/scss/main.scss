@@ -35,12 +35,22 @@ body{
 		height: 20px;
 		top: 20px;
 		padding: 10px;
+		background: $white;
+		font-weight: bold;
+		cursor: pointer;
+		text-align: center;
+		border-radius: 5px;
+		transition: $anim;
+		color: $orange;
+		&:hover{background: $light_indigo;}
+		right: 100px;
 	}
 }
 
 .logo{
 	position: absolute;
 	top: 10px;
+	bottom: 10px;
 	left: 100px;
 	transition: $anim;
 	img{
@@ -51,6 +61,7 @@ body{
 .name{
 	position: absolute;
 	top: 10px;
+	bottom: 10px;
 	left: 160px;
 	font-size: 3em;
 	font-weight: bolder;
@@ -59,21 +70,14 @@ body{
 	transition: $anim;
 }
 
-.btn{
-	background: $white;
-	font-weight: bold;
-	cursor: pointer;
-	text-align: center;
-	border-radius: 5px;
-	transition: $anim;
-	color: $orange;
-	&:hover{background: $light_indigo;}
-
-}
-
-//MENU BUTTONS
-.logout_menu_btn{
-	right: 100px;
+.email{
+	position: absolute;
+	font-size: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	top: 10px;
+	bottom: 10px;
+	left: 450px;
 }
 
 //FOLDERS
@@ -107,7 +111,7 @@ body{
 		}
 	}
 }
-
+	
 //NOTES
 .notes{
 	position: absolute;
@@ -140,6 +144,8 @@ body{
 		border: none;
 		resize: none;
 		outline: none;
+		height: calc(100% - 50px);
+		box-sizing: border-box;
 	}
 	&:hover{
 		box-shadow: 0 0 15px lightgray;
