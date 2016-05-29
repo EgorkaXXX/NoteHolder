@@ -117,7 +117,7 @@ body{
 	position: absolute;
 	top: 80px;
 	left: 100px;
-	bottom: 80px;
+	bottom: 0;
 	right: 0;
 	overflow: auto;
 }
@@ -151,8 +151,43 @@ body{
 		box-shadow: 0 0 15px lightgray;
 	}
 }
+.add_note{
+	position: absolute;
+	z-index: 6;
+	bottom: 30px;
+	right: 30px;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	box-shadow: 0 0 5px lightgray;
+	background: $orange;
+	transition: $anim;
+	cursor: pointer;
+	.vertical{
+		position: absolute;
+		z-index: 7;
+		width: 10px;
+		height: 40px;
+		border-radius: 2px;
+		margin: 10px 25px 10px 25px;
+		background: $white;
+	}
+	.horizontal{
+		position: absolute;
+		z-index: 7;
+		width: 40px;
+		height: 10px;
+		border-radius: 2px;
+		margin: 25px 10px 25px 10px;
+		background: $white;
+	}
+	&:hover{
+		transform: scale(1.1,1.1);
+		box-shadow: 0 0 15px lightgray;
+	}
+}
 
-.remove{
+.remove_note{
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -161,6 +196,24 @@ body{
 	width: 20px;
 	border-radius: 10px;
 	display: none;
+	.r1{
+		position: absolute;
+		height: 16px;
+		width: 4px;
+		border-radius: 1px;
+		margin: 2px 8px 2px 8px;
+		background: $white;
+		transform: rotate(45deg);
+	}
+	.r2{
+		position: absolute;
+		height: 16px;
+		width: 4px;
+		border-radius: 1px;
+		margin: 2px 8px 2px 8px;
+		background: $white;
+		transform: rotate(-45deg);
+	}
 }
 
 .back{
@@ -178,16 +231,17 @@ body{
 	bottom: 0;
 	left: 0;
 	background: $white;
-	width: 100%;
+	width: 100px;
 	height: 80px;
 	box-shadow: 0 0 25px lightgray;
 	transition: $anim;
 }
 
-.action_btn{
+.add_folder{
+	left: 10px;
 	position: absolute;
 	top: 10px;
-	height: 60px;
+	height: 30px;
 	border: none;
 	background: $white;
 	font-weight: bolder;
@@ -200,14 +254,22 @@ body{
 	outline: none;
 	&:hover{background: $light_indigo;}
 }
-.create_note{
-	left: 100px;
-}
-.create_folder{
-	right: 250px;
-}
 .remove_folder{
-	right: 100px;
+	left: 10px;
+	position: absolute;
+	top: 40px;
+	height: 30px;
+	border: none;
+	background: $white;
+	font-weight: bolder;
+	font-size: 1em;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 5px;
+	transition: $anim;
+	color: $orange;
+	outline: none;
+	&:hover{background: $light_indigo;}
 }
 
 

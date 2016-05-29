@@ -25,13 +25,16 @@
 <!--	NOTES-->
 	<div class="notes"></div>
 	<div class="back"></div>
+	<div class="add_note">
+		<div class="vertical"></div>
+		<div class="horizontal"></div>
+	</div>
 <!--	PLEASE SELECT YOUR FOLDER-->
 	<div class="help">Please, select or create</br> your folder on</br>the left side menu.</div> 
 <!--	ACTION BTNS-->
 	<div class="buttons">
-    	<button class="action_btn create_note">Create Note</button>
-		<button class="action_btn create_folder">Create Folder</button>
-		<button class="action_btn remove_folder">Remove Folder</button>
+		<button class="add_folder">Add</button>
+		<button class="remove_folder">Remove</button>
 	</div>
 <!--CONTEXT MENU-->
     <div class="itemName">

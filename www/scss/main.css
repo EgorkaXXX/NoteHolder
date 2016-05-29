@@ -88,7 +88,7 @@ body {
   position: absolute;
   top: 80px;
   left: 100px;
-  bottom: 80px;
+  bottom: 0;
   right: 0;
   overflow: auto; }
 
@@ -118,7 +118,39 @@ body {
   .note:hover {
     box-shadow: 0 0 15px lightgray; }
 
-.remove {
+.add_note {
+  position: absolute;
+  z-index: 6;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: 0 0 5px lightgray;
+  background: #FF5722;
+  transition: all 0.5s;
+  cursor: pointer; }
+  .add_note .vertical {
+    position: absolute;
+    z-index: 7;
+    width: 10px;
+    height: 40px;
+    border-radius: 2px;
+    margin: 10px 25px 10px 25px;
+    background: #FFFFFF; }
+  .add_note .horizontal {
+    position: absolute;
+    z-index: 7;
+    width: 40px;
+    height: 10px;
+    border-radius: 2px;
+    margin: 25px 10px 25px 10px;
+    background: #FFFFFF; }
+  .add_note:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 0 15px lightgray; }
+
+.remove_note {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -127,6 +159,22 @@ body {
   width: 20px;
   border-radius: 10px;
   display: none; }
+  .remove_note .r1 {
+    position: absolute;
+    height: 16px;
+    width: 4px;
+    border-radius: 1px;
+    margin: 2px 8px 2px 8px;
+    background: #FFFFFF;
+    transform: rotate(45deg); }
+  .remove_note .r2 {
+    position: absolute;
+    height: 16px;
+    width: 4px;
+    border-radius: 1px;
+    margin: 2px 8px 2px 8px;
+    background: #FFFFFF;
+    transform: rotate(-45deg); }
 
 .back {
   position: fixed;
@@ -141,15 +189,16 @@ body {
   bottom: 0;
   left: 0;
   background: #FFFFFF;
-  width: 100%;
+  width: 100px;
   height: 80px;
   box-shadow: 0 0 25px lightgray;
   transition: all 0.5s; }
 
-.action_btn {
+.add_folder {
+  left: 10px;
   position: absolute;
   top: 10px;
-  height: 60px;
+  height: 30px;
   border: none;
   background: #FFFFFF;
   font-weight: bolder;
@@ -160,17 +209,26 @@ body {
   transition: all 0.5s;
   color: #FF5722;
   outline: none; }
-  .action_btn:hover {
+  .add_folder:hover {
     background: #C5CAE9; }
 
-.create_note {
-  left: 100px; }
-
-.create_folder {
-  right: 250px; }
-
 .remove_folder {
-  right: 100px; }
+  left: 10px;
+  position: absolute;
+  top: 40px;
+  height: 30px;
+  border: none;
+  background: #FFFFFF;
+  font-weight: bolder;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  transition: all 0.5s;
+  color: #FF5722;
+  outline: none; }
+  .remove_folder:hover {
+    background: #C5CAE9; }
 
 .help {
   font-size: 2em;
