@@ -118,6 +118,16 @@ body {
   .note:hover {
     box-shadow: 0 0 15px lightgray; }
 
+.remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #FF5722;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  display: none; }
+
 .back {
   position: fixed;
   top: 80px;
@@ -155,9 +165,6 @@ body {
 
 .create_note {
   left: 100px; }
-
-.remove_note {
-  left: 250px; }
 
 .create_folder {
   right: 250px; }

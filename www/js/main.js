@@ -24,7 +24,7 @@ var elems = {
 	'back': document.querySelector(".back"),
 	'help': document.querySelector(".help"),
 	'create_note_btn': document.querySelector(".create_note"),
-	'remove_note_btn': document.querySelector(".remove_note"),
+	'remove': document.querySelector(".remove"),
 	'create_folder_btn': document.querySelector(".create_folder"),
 	'remove_folder_btn': document.querySelector(".remove_folder")
 	
@@ -65,7 +65,7 @@ ViewNotes = function(){
                 n.id = data[i]['name'];
                 n.className = "note note_"+data[i]['name']+" "+"folder_"+data[i]['folder_name'];
                 n.innerHTML = "<h1>"+data[i]['name']+"</h1><textarea name='"+data[i]['name']+"' \n\
-                onblur='GiveContent()'>"+data[i]['content']+"</textarea>";
+                onblur='GiveContent()'>"+data[i]['content']+"</textarea><div class='remove'></div>";
                 elems.notes.appendChild(n); 
             }
         DeselectNote();
@@ -155,6 +155,7 @@ DeselectFolder = function(){
 InitNotes = function(){
 	for(i=0; i<note.length; i++){
 		note[i].addEventListener('click', SelectNote);
+		note[i].lastChild.addEventListener('click', RemoveNote);
 		if(t==null){
 			note[i].style.display="none";
 		}else if(t.className.substring(7)==note[i].className.substring(note[i].className.length - t.className.substring(7).length)){
@@ -178,7 +179,7 @@ CreateNote = function(){
                         n.id = n_name;
 			n.className = "note note_"+n_name+" "+t.className.substring(7);
 			n.innerHTML = "<h1>"+n_name+"</h1><textarea name='"+n_name+"' \n\
-                        onblur=GiveContent()></textarea>";
+                        onblur=GiveContent()></textarea><div class='remove'></div>";
 			elems.notes.appendChild(n);
                         var note_str = folderName + "&nbsp" + n_name;
                         document.getElementById('item_name').value = note_str;
@@ -200,9 +201,13 @@ RemoveNote = function(){
 }
 
 SelectNote = function(){
-	if(tn!=null){tn.style.transform="scale(1,1)";}
+	if(tn!=null){
+		tn.style.transform="scale(1,1)";
+		tn.lastChild.style.display="none";
+	}
 	window.tn = this;
 	tn.style.transform="scale(1.1,1.1)";
+	tn.lastChild.style.display="block";
         noteName = this.id;
         var note_str = folderName + "&nbsp" + this.id;
         
@@ -210,7 +215,10 @@ SelectNote = function(){
 }
 
 DeselectNote = function(){
-	if(tn!=null){tn.style.transform="scale(1,1)";}
+	if(tn!=null){
+		tn.style.transform="scale(1,1)";
+		tn.lastChild.style.display="none";
+	}
 	window.tn = null;
 }
 
@@ -235,7 +243,6 @@ Logout = function(){
 
 	//Notes&Folders
 	elems.create_note_btn.onclick = function(){CreateNote();};
-	elems.remove_note_btn.onclick = function(){RemoveNote();};
 	elems.create_folder_btn.onclick = function(){CreateFolder();};
 	elems.remove_folder_btn.onclick = function(){RemoveFolder();};
 

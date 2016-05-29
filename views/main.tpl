@@ -30,9 +30,8 @@
 <!--	ACTION BTNS-->
 	<div class="buttons">
     	<button class="action_btn create_note">Create Note</button>
-        <button class="action_btn remove_note">Remove Note</button>
-	<button class="action_btn create_folder">Create Folder</button>
-	<button class="action_btn remove_folder">Remove Folder</button>
+		<button class="action_btn create_folder">Create Folder</button>
+		<button class="action_btn remove_folder">Remove Folder</button>
 	</div>
 <!--CONTEXT MENU-->
     <div class="itemName">
