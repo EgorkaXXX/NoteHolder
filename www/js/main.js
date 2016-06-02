@@ -65,7 +65,7 @@ ViewNotes = function(){
                 n.id = data[i]['name'];
                 n.className = "note note_"+data[i]['name']+" "+"folder_"+data[i]['folder_name'];
                 n.innerHTML = "<h1>"+data[i]['name']+"</h1><textarea name='"+data[i]['name']+"' \n\
-                onblur='GiveContent()'>"+data[i]['content']+"</textarea><div class='remove_note'><div class='r1'></div><div class='r2'></div></div>";
+                onblur='GiveContent()'>"+data[i]['content']+"</textarea><div class='remove_note'><img src='../img/clear.svg'></div>";
                 elems.notes.appendChild(n); 
             }
         DeselectNote();
@@ -179,7 +179,7 @@ CreateNote = function(){
                         n.id = n_name;
 			n.className = "note note_"+n_name+" "+t.className.substring(7);
 			n.innerHTML = "<h1>"+n_name+"</h1><textarea name='"+n_name+"' \n\
-                        onblur=GiveContent()></textarea><div class='remove_note'><div class='r1'></div><div class='r2'></div></div>";
+                        onblur=GiveContent()></textarea><div class='remove_note'><img src='../img/clear.svg'></div>";
 			elems.notes.appendChild(n);
                         var note_str = folderName + "&nbsp" + n_name;
                         document.getElementById('item_name').value = note_str;
