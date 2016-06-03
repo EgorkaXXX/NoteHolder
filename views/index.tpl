@@ -32,7 +32,7 @@
 				<h1>Welcome to NoteHolder!</h1>
 				<p>
 				We provide a brand new way for you to organize everithyng has sense - many kinds of information, which can be important for you!
-				Text, links, pictures, drawnings... any files.
+				Text, links, lists... any information.
 				</p>
 			</div>
 			<div class="pic">
@@ -52,7 +52,7 @@
 				<h1>Use lots of usefull functions we present to you!</h1>
 				<p>
 				Feel free to create, organize and share information any way you like!
-				Add notes, folders, mark them, sort them by name, color, date, share in social networks...
+				Add notes and folders!
 				Use lots of usefull functions we present to you!
 				</p>
 			</div>
@@ -77,7 +77,6 @@
 				<p>
 				Just spend few seconds to register or login by clicking buttons on the top menu and you can start working!
 				We hope you will enjoy your usage experience on any platform we support - let it be desktop or mobile device, we will make 		everything for you to feel comfortly using NoteHolder!
-				To contact us  write to noteholder@gmail.com
 				</p>
 			</div>
 			<div class="pic">
